@@ -82,6 +82,10 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 
 .split{display:flex;flex-wrap:wrap;gap:56px}
 .split > div{flex:1 1 380px;min-width:0}
+.about{align-items:flex-start}
+.about > div{flex:1 1 300px}
+.about > .portrait{flex:0 0 260px}
+.portrait img{display:block;width:100%;height:auto;border-radius:6px}
 .list-lined{margin:0;padding:0;list-style:none}
 .list-lined li{padding:16px 0;border-bottom:1px solid var(--line)}
 .list-lined li:last-child{border-bottom:0}
@@ -145,5 +149,6 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
   .signup{padding:28px}
   .cover{flex-basis:200px}
   .hero-book{gap:40px}
+  .about > .portrait{flex-basis:200px}
   .hero-book .cover{flex-basis:200px;min-width:180px}
 }
