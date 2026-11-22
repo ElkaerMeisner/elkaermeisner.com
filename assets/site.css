@@ -86,6 +86,7 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .about > div{flex:1 1 300px}
 .about > .portrait{flex:0 0 260px}
 .portrait img{display:block;width:100%;height:auto;border-radius:6px}
+.about-sm > .portrait{flex-basis:200px}
 .list-lined{margin:0;padding:0;list-style:none}
 .list-lined li{padding:16px 0;border-bottom:1px solid var(--line)}
 .list-lined li:last-child{border-bottom:0}
@@ -131,7 +132,11 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .prose.note h2{font-size:22px;margin-top:36px}
 .prose.note ol{margin-top:16px;padding-left:22px;color:var(--text)}
 .prose.note em{color:var(--muted)}
-.note-foot{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.author{display:flex;gap:20px;align-items:flex-start;margin-top:48px;padding:24px;background:var(--soft);border-radius:8px}
+.author img{width:72px;height:72px;border-radius:50%;flex:none}
+.prose.note .author p{margin:0;font-size:15px}
+.prose.note .author .author-name{font-weight:600;color:var(--ink);margin-bottom:4px}
+.note-foot{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
 .note-nav{display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:500}
 .note-list{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
 
