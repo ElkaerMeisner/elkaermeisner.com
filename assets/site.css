@@ -118,6 +118,17 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .prose p,.prose ul{margin-top:16px;color:var(--text)}
 .prose li{margin-top:6px}
 
+/* notes */
+.note .eyebrow{margin-bottom:16px;color:var(--accent)}
+.prose.note h1{line-height:1.15}
+.note-meta{margin-top:16px;font-size:15px;color:var(--muted)}
+.prose.note h2{font-size:22px;margin-top:36px}
+.prose.note ol{margin-top:16px;padding-left:22px;color:var(--text)}
+.prose.note em{color:var(--muted)}
+.note-foot{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.note-nav{display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:500}
+.note-list{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+
 /* footer */
 .site-footer{border-top:1px solid var(--line);background:var(--soft)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-top:48px;padding-bottom:48px;font-size:15px;color:var(--text)}
