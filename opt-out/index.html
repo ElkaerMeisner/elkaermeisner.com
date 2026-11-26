@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitor statistics on this device · Michael Elkær Meisner</title>
+<meta name="description" content="Leave this browser out of the visitor statistics on elkaermeisner.com.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://elkaermeisner.com/opt-out/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">Michael Elkær Meisner</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../doctrine/">The Agent Doctrine</a>
+      <a href="../notes/">Notes from the bridge</a>
+      <a href="../#about">About</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap section section-last">
+  <div class="prose">
+    <h1>Visitor statistics on this device</h1>
+    <p>This site counts page views and downloads with Plausible Analytics, as described on the <a href="../privacy/">privacy page</a>. Here you can leave this browser out of the count.</p>
+    <p id="status" role="status" style="font-weight:600">Checking this browser.</p>
+    <p><button id="toggle" class="btn btn-dark" type="button" style="font-family:inherit;cursor:pointer">Leave this browser out</button></p>
+    <p class="small">Your choice is saved as a single setting in this browser and is not sent anywhere. It applies to this browser only, and it is lost if you clear the browser's website data.</p>
+    <noscript><p>This page needs JavaScript. Without JavaScript your visits are not counted at all.</p></noscript>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="name">Michael Elkær Meisner</p>
+      <p style="margin-top:6px">Executive advisor, Denmark</p>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/mmeis/">LinkedIn</a>
+      <a href="../privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script>
+/* Plausible skips a browser where localStorage.plausible_ignore is "true". */
+(function () {
+  var status = document.getElementById('status'), button = document.getElementById('toggle');
+  function off() { try { return localStorage.getItem('plausible_ignore') === 'true'; } catch (e) { return null; } }
+  function show() {
+    var o = off();
+    if (o === null) { status.textContent = 'This browser does not allow the setting to be saved, so the choice cannot be stored here.'; button.style.display = 'none'; return; }
+    status.textContent = o ? 'Visits from this browser are not counted.' : 'Visits from this browser are counted.';
+    button.textContent = o ? 'Count this browser again' : 'Leave this browser out';
+  }
+  button.addEventListener('click', function () {
+    try { if (off()) localStorage.removeItem('plausible_ignore'); else localStorage.setItem('plausible_ignore', 'true'); } catch (e) {}
+    show();
+  });
+  show();
+})();
+</script>
+</body>
+</html>
