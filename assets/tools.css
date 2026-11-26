@@ -1,0 +1,59 @@
+/* The Agent Doctrine: interactive tools. Builds on site.css and guide.css. */
+.t-hero{padding-top:72px;padding-bottom:8px}
+.t-hero h1{font-weight:700;font-size:clamp(36px,6vw,56px);line-height:1.05;letter-spacing:-0.025em}
+.t-hero .lead{margin-top:20px}
+.t-crumb{font-size:14px;font-weight:500;margin-bottom:20px}
+.t-crumb a{color:var(--text);text-decoration:none}
+.t-crumb a:hover{color:var(--accent)}
+.t-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.t-bar .btn{min-height:44px;padding:0 18px;font-size:15px;cursor:pointer}
+.t-privacy{margin-top:16px;font-size:14px;color:var(--muted);max-width:680px}
+.t-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;margin-top:48px;padding-bottom:56px;align-items:start}
+@media (min-width:1000px){.t-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.t-side{position:sticky;top:24px}}
+.t-side .g-result{margin-top:0}
+.t-side h2{font-family:var(--display);font-weight:600;font-size:22px}
+.t-side .g-result + .g-result{margin-top:16px}
+
+/* fields */
+.t-field{display:block;margin-top:18px}
+.t-field > span{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.t-field > small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.t-field input,.t-field select,.t-field textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;border:1px solid #B9C2CE;border-radius:6px;background:#fff;font:inherit;font-size:16px;color:var(--ink)}
+.t-field textarea{min-height:76px;resize:vertical}
+.t-field input:focus,.t-field select:focus,.t-field textarea:focus{outline:3px solid var(--accent);outline-offset:1px}
+.t-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:0 20px}
+
+/* groups */
+.t-group{border:1px solid var(--line);border-radius:8px;margin-top:16px}
+.t-group > summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;cursor:pointer;font-family:var(--display);font-weight:600;font-size:19px;list-style:none}
+.t-group > summary::-webkit-details-marker{display:none}
+.t-group > summary::after{content:"+";font-weight:500;color:var(--muted);font-size:22px;line-height:1}
+.t-group[open] > summary::after{content:"\2212"}
+.t-group > summary .lvl{margin-left:auto;font-family:var(--body);font-size:13px;font-weight:600;color:var(--muted)}
+.t-group .in{padding:0 20px 22px}
+.t-q{padding:18px 0;border-top:1px solid var(--line)}
+.t-q .lv{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.t-q p{margin-top:4px}
+.t-q .row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:10px}
+.t-st{font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.t-st.counts{background:var(--ok-soft);color:var(--ok)}
+.t-st.missing{background:var(--warn-soft);color:var(--signal-ink)}
+.t-st.no{background:var(--soft);color:var(--text)}
+.t-ev{margin-top:4px}
+
+/* result */
+.t-kv{margin:16px 0 0;padding:0;list-style:none}
+.t-kv li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.t-kv li span:first-child{color:var(--text)}
+.t-kv li span:last-child{font-weight:600;text-align:right}
+.t-checks{margin:16px 0 0;padding:0;list-style:none}
+.t-checks li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.t-checks .s{flex:0 0 64px;font-size:13px;font-weight:600}
+.t-checks .ok .s{color:var(--ok)}
+.t-checks .open .s{color:var(--signal-ink)}
+.t-checks .open{font-weight:600}
+.t-copy-note{font-size:14px;color:var(--muted);margin-top:10px;min-height:20px}
+.t-ctrl{margin:12px 0 0;padding:0;list-style:none}
+.t-ctrl li{padding:10px 0;border-top:1px solid var(--line);font-size:15px;color:var(--text)}
+.t-ctrl strong{display:block;color:var(--ink);font-weight:600}
+@media (max-width:600px){.t-hero{padding-top:48px}.t-layout{margin-top:32px;gap:28px}.t-group > summary{padding:16px}.t-group .in{padding:0 16px 18px}}
