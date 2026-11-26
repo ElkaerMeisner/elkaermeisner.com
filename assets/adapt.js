@@ -429,11 +429,20 @@
      the same way in browsers that ignore print styles. */
   var body = document.body;
   function restore() { body.classList.remove('plan-printing'); }
+  /* Pick the largest text size at which the sheet still fits one page. The sheet scales
+     with its own width, so its height-to-width ratio is the same on screen and on paper. */
+  function fitSheet() {
+    var sizes = [1.8, 1.75, 1.7, 1.65, 1.6, 1.55, 1.5, 1.45, 1.4, 1.35, 1.3];
+    for (var i = 0; i < sizes.length; i++) {
+      plan.style.setProperty('--sheet-fs', sizes[i] + 'cqw');
+      if (plan.offsetWidth && plan.offsetHeight / plan.offsetWidth <= 1.3) return;
+    }
+  }
   function printPlan() {
     body.classList.add('plan-only');
     body.classList.add('plan-printing');
     window.scrollTo(0, 0);
-    void body.offsetHeight;
+    fitSheet();
     var t0 = Date.now(), armed = false;
     var done = function () {
       if (armed) return;
