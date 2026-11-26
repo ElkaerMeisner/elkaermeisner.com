@@ -222,9 +222,9 @@
   };
   var SHORT = [["the three decisions before day 1", "the coordinator", "the amnesty", "the scope of the first round", "who is responsible for each line"], ["where the record lives", "the floors", "a reference agent for each size", "the classes", "the legal position", "the sources for the inventory"], ["who reports and who confirms the level", "the areas that matter", "the target level", "what counts as evidence"], ["people and hours per role", "costs that are not hours", "the number of agents covered", "when it is measured and reported"], ["the five incident types", "the layers of a stop", "stop holders and deputies", "the log: content, retention and reader", "telling employees about logging"], ["the suppliers of each agent", "who reads the terms", "region, retention and training settings", "the role under the AI Act"], ["who writes the page", "when the first page goes to the board", "the right to go behind the page", "the board’s three decisions"]];
   var PLAN90 = [
-    'Days 1 to 30: Inventory from all sources. Amnesty for unregistered agents. Existing incident duties apply from day one. Result: a first list.',
-    'Days 31 to 60: Owner, purpose, end date and size for every agent in scope. Floors agreed with the risk function. Result: level 3 for agents in scope.',
-    'Days 61 to 90: Identity and limits for large agents. Stop holders named. First page to the board. Result: a basis for the board’s ten questions.'];
+    ['30', 'Days 1 to 30', 'Inventory from all sources. Amnesty for unregistered agents. Existing incident duties apply from day one.', 'a first list.'],
+    ['60', 'Days 31 to 60', 'Owner, purpose, end date and size for every agent in scope. Floors agreed with the risk function.', 'level 3 for agents in scope.'],
+    ['90', 'Days 61 to 90', 'Identity and limits for large agents. Stop holders named. First page to the board.', 'a basis for the board’s ten questions.']];
 
   var answers = {}, done = TOOLS.map(function (t) { return t.items.map(function () { return false; }); });
   var qNodes = {}, tNodes = [];
@@ -297,7 +297,7 @@
     var org = QUESTIONS.map(function (q) {
       var o = answers[q.id];
       return o === undefined ? { head: q.head, answer: '', line: '' }
-        : { head: q.head, answer: q.opts[o][0], line: LINES[q.id][o][0] + ' (' + LINES[q.id][o][1] + ')' };
+        : { head: q.head, answer: q.opts[o][0], text: LINES[q.id][o][0], source: LINES[q.id][o][1], line: LINES[q.id][o][0] + ' (' + LINES[q.id][o][1] + ')' };
     });
     var open = [], decided = 0, total = 0;
     TOOLS.forEach(function (t, ti) {
@@ -313,7 +313,7 @@
     if (!d.open.length) L.push('None.');
     d.open.forEach(function (o) { L.push('- ' + o.name + ': ' + o.items.join('; ') + '.'); });
     L.push('', '3 The first ninety days');
-    PLAN90.forEach(function (x) { L.push('- ' + x); });
+    PLAN90.forEach(function (x) { L.push('- ' + x[1] + ': ' + x[2] + ' Result: ' + x[3]); });
     L.push('', 'Source: elkaermeisner.com/doctrine. The Agent Doctrine by Michael Elkær Meisner, CC BY 4.0. Not legal advice.');
     return L.join('\n');
   }
@@ -341,33 +341,83 @@
     prog.textContent = answered + ' of ' + QUESTIONS.length + ' questions answered. ' + d.decided + ' of ' + d.total + ' decisions taken.';
 
     plan.textContent = '';
-    plan.appendChild(el('h3', 't-plan-title', 'The Agent Regime: adaptation plan'));
-    plan.appendChild(el('h4', '', '1 Your organisation'));
-    var ul = el('ul');
+    plan.appendChild(sheetHead());
+    var bodyEl = el('div', 'sheet-body');
+    var h = function (n, text, cnt) {
+      var h4 = el('h4');
+      var sp = el('span');
+      sp.appendChild(el('b', '', String(n)));
+      sp.appendChild(document.createTextNode(text));
+      h4.appendChild(sp);
+      if (cnt) h4.appendChild(el('span', 'cnt', cnt));
+      return h4;
+    };
+    bodyEl.appendChild(h(1, 'Your organisation'));
+    var org = el('div', 'sheet-org');
     d.org.forEach(function (s) {
-      var li = el('li');
-      li.appendChild(el('strong', '', s.head + ': ' + (s.answer ? s.answer + '. ' : 'not answered.')));
-      if (s.line) li.appendChild(document.createTextNode(s.line));
-      ul.appendChild(li);
+      var c = el('div', 'c');
+      var hd = el('span', 'h');
+      hd.appendChild(el('span', 'k', s.head));
+      hd.appendChild(el('span', s.answer ? 'a' : 'a none', s.answer || 'Not answered'));
+      c.appendChild(hd);
+      if (!s.answer) { org.appendChild(c); return; }
+      var l = el('span', 'l', s.text + ' ');
+      l.appendChild(el('span', 's', s.source));
+      c.appendChild(l);
+      org.appendChild(c);
     });
-    plan.appendChild(ul);
-    plan.appendChild(el('h4', '', '2 Decisions still open (' + d.decided + ' of ' + d.total + ' taken)'));
-    if (!d.open.length) plan.appendChild(el('p', 'ans', 'None.'));
-    else {
-      var ul3 = el('ul');
-      d.open.forEach(function (o) {
-        var li = el('li');
-        li.appendChild(el('strong', '', o.name + ': '));
-        li.appendChild(document.createTextNode(o.items.join('; ') + '.'));
-        ul3.appendChild(li);
-      });
-      plan.appendChild(ul3);
+    bodyEl.appendChild(org);
+    bodyEl.appendChild(h(2, 'Decisions still open', d.decided + ' of ' + d.total + ' taken'));
+    var open = el('div', 'sheet-open');
+    if (!d.open.length) open.appendChild(el('div', 'none', 'None. Every decision on the list has been taken.'));
+    d.open.forEach(function (o) {
+      var r = el('div', 'r');
+      r.appendChild(el('span', 't', o.name));
+      r.appendChild(el('span', '', o.items.join('; ') + '.'));
+      open.appendChild(r);
+    });
+    bodyEl.appendChild(open);
+    bodyEl.appendChild(h(3, 'The first ninety days'));
+    var nd = el('div', 'sheet-90');
+    PLAN90.forEach(function (x) {
+      var c = el('div');
+      var hd = el('span', 'hd');
+      hd.appendChild(el('span', 'n', x[0]));
+      hd.appendChild(el('span', 'd', x[1]));
+      c.appendChild(hd);
+      c.appendChild(el('p', '', x[2]));
+      c.appendChild(el('p', 'res', 'Result: ' + x[3]));
+      nd.appendChild(c);
+    });
+    bodyEl.appendChild(nd);
+    var src = el('p', 'src');
+    src.appendChild(el('i'));
+    src.appendChild(el('span', '', 'elkaermeisner.com/doctrine. The Agent Doctrine by Michael Elkær Meisner, CC BY 4.0. Not legal advice.'));
+    bodyEl.appendChild(src);
+    plan.appendChild(bodyEl);
+  }
+
+  function sheetHead() {
+    var NS = 'http://www.w3.org/2000/svg';
+    var mk = function (tag, attrs, text) {
+      var e = document.createElementNS(NS, tag);
+      Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+      if (text != null) e.textContent = text;
+      return e;
+    };
+    var svg = mk('svg', { viewBox: '0 0 1000 164', preserveAspectRatio: 'xMinYMid slice', 'class': 'sheet-head', role: 'img', 'aria-label': 'The Agent Doctrine: adaptation plan' });
+    svg.appendChild(mk('rect', { x: 0, y: 0, width: 1000, height: 164, fill: '#0B1F33' }));
+    svg.appendChild(mk('text', { x: 40, y: 50, fill: '#9DB7F5', 'font-family': 'Inter, system-ui, sans-serif', 'font-size': 13, 'font-weight': 600, 'letter-spacing': 1.6 }, 'THE AGENT DOCTRINE'));
+    svg.appendChild(mk('text', { x: 38, y: 101, fill: '#ffffff', 'font-family': '"Space Grotesk", system-ui, sans-serif', 'font-size': 46, 'font-weight': 700, 'letter-spacing': -1 }, 'Adaptation plan'));
+    var day = '';
+    try { day = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { day = ''; }
+    svg.appendChild(mk('text', { x: 40, y: 134, fill: '#D5DDE8', 'font-family': 'Inter, system-ui, sans-serif', 'font-size': 15 }, 'The Agent Regime in your organisation' + (day ? '  ·  ' + day : '')));
+    for (var r = 0; r < 4; r++) for (var c = 0; c < 9; c++) {
+      var on = r === 2 && c === 5;
+      svg.appendChild(mk('rect', { x: 716 + c * 28, y: 28 + r * 28, width: 20, height: 20,
+        fill: on ? '#FF5B2E' : 'none', stroke: on ? '#FF5B2E' : '#ffffff', 'stroke-opacity': on ? 1 : 0.22, 'stroke-width': 1 }));
     }
-    plan.appendChild(el('h4', '', '3 The first ninety days'));
-    var ul2 = el('ul');
-    PLAN90.forEach(function (x) { ul2.appendChild(el('li', '', x)); });
-    plan.appendChild(ul2);
-    plan.appendChild(el('p', 'src', 'Source: elkaermeisner.com/doctrine. The Agent Doctrine by Michael Elkær Meisner, CC BY 4.0. Not legal advice.'));
+    return svg;
   }
 
   var note = $('#adapt-note');
