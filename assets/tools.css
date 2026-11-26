@@ -76,17 +76,3 @@
 .t-plan li{margin-top:6px}
 .t-plan li strong{font-weight:600;color:var(--ink)}
 @media (max-width:600px){.t-plan{padding:20px}}
-@media print{
-  .adapt-page .site-header,.adapt-page .site-footer,.adapt-page .t-hero,.adapt-page .g-nav,.adapt-page .no-print{display:none!important}
-  .adapt-page .g-sec{padding-top:0}
-  .adapt-page .t-plan{border:0;padding:0;margin:0;max-width:none}
-  .adapt-page{font-size:10pt;line-height:1.4}
-  .adapt-page .t-plan ul,.adapt-page .t-plan p{font-size:9.5pt;line-height:1.4}
-  .adapt-page .t-plan li{margin-top:3px}
-  .adapt-page .t-plan h4{margin-top:11px;font-size:11.5pt}
-  .adapt-page .t-plan-title{font-size:15pt}
-  .adapt-page .t-plan p.src{margin-top:12px;font-size:8pt}
-  .adapt-page #plan{padding:0}
-  @page{size:A4;margin:14mm}
-  .adapt-page .t-plan h4{break-after:avoid}
-}
