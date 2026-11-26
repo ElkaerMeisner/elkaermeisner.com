@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Agent Doctrine: a visual guide · Michael Elkær Meisner</title>
+<meta name="description" content="The Agent Doctrine in ten minutes: the argument, the ten rules, limits, size, the ladder and the board’s ten questions, with things to try on your own agents.">
+<link rel="canonical" href="https://elkaermeisner.com/doctrine/guide/">
+<meta property="og:title" content="The Agent Doctrine: a visual guide">
+<meta property="og:description" content="The argument, the ten rules and the ladder, with things to try on your own agents.">
+<meta property="og:url" content="https://elkaermeisner.com/doctrine/guide/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://elkaermeisner.com/assets/og-doctrine.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:site_name" content="Michael Elkær Meisner">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/guide.css">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-M3YlUIsw4hSc9hp3vxf2L.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script defer src="../../assets/guide.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../">Michael Elkær Meisner</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../" aria-current="page">The Agent Doctrine</a>
+      <a href="../../notes/">Notes from the bridge</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="g-hero">
+    <div class="wrap">
+      <div class="g-hero-text">
+        <p class="eyebrow">The Agent Doctrine · Visual guide</p>
+        <h1>The Doctrine in ten minutes</h1>
+        <p class="lead">An agent is a worker without a contract. Everything we know about running workers, suppliers and systems applies to it, and almost none of it is being applied.</p>
+        <p class="sub">This guide follows the book: the argument, the ten rules, the ideas that carry them, the ladder and the board’s part. Each part has something to try on an agent of your own. Your answers stay on this page. Nothing you tick or choose is stored or sent.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="#test">Take the contract test</a>
+          <a class="btn btn-ghost" href="../">Get the book</a>
+        </div>
+      </div>
+      <div class="g-field" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span class="on"></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="g-nav" aria-label="On this page">
+    <div class="wrap">
+      <a href="#argument">Argument</a>
+      <a href="#test">Test</a>
+      <a href="#rules">Ten rules</a>
+      <a href="#access">Access</a>
+      <a href="#limits">Limits</a>
+      <a href="#size">Size</a>
+      <a href="#incidents">Incidents</a>
+      <a href="#ladder">Ladder</a>
+      <a href="#board">Board</a>
+      <a href="#start">Start</a>
+    </div>
+  </nav>
+
+  <!-- 01 -->
+  <section class="wrap g-sec" id="argument" aria-labelledby="argument-h">
+    <p class="eyebrow">01 · The argument</p>
+    <h2 id="argument-h">Settled for people and suppliers, open for an agent</h2>
+    <p class="g-intro">If the same work were given to a person, an agreement would settle a handful of things before the first day. The Doctrine asks for the same.</p>
+    <div class="g-compare-pick" data-js hidden>
+      <div class="g-seg" role="group" aria-label="Compare the agent with">
+        <button type="button" data-compare="employee" aria-pressed="true">An employee</button>
+        <button type="button" data-compare="supplier" aria-pressed="false">A supplier</button>
+      </div>
+    </div>
+    <table class="g-compare" data-compare="employee">
+      <thead>
+        <tr><th scope="col"><span class="sr-only">Question</span></th><th scope="col" class="employee">An employee</th><th scope="col" class="supplier">A supplier</th><th scope="col" class="agent">An agent</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Who answers</th><td class="employee">A manager</td><td class="supplier">Contract owner</td><td class="agent">Nobody</td></tr>
+        <tr><th scope="row">What it is for</th><td class="employee">Job description</td><td class="supplier">Agreed scope</td><td class="agent">Not written</td></tr>
+        <tr><th scope="row">What it may reach</th><td class="employee">Access by role</td><td class="supplier">Agreed access</td><td class="agent">Its builder’s</td></tr>
+        <tr><th scope="row">What it may decide</th><td class="employee">Authority limits</td><td class="supplier">A mandate</td><td class="agent">Whatever it can</td></tr>
+        <tr><th scope="row">How it is followed</th><td class="employee">Appraisal</td><td class="supplier">Service reports</td><td class="agent">Nobody reads it</td></tr>
+        <tr><th scope="row">How it ends</th><td class="employee">Leaving routine</td><td class="supplier">Term and exit</td><td class="agent">It does not</td></tr>
+      </tbody>
+    </table>
+    <p class="g-note">The agent column shows what is true by default, before anyone has decided anything. From chapter 1, figure 1.1.</p>
+  </section>
+
+  <!-- 02 -->
+  <section class="wrap g-sec" id="test" aria-labelledby="test-h">
+    <p class="eyebrow">02 · Try it</p>
+    <h2 id="test-h">The contract test</h2>
+    <p class="g-intro">Choose an agent that somebody relies on, and answer six questions about it. Tick a question only if it can be answered at once, with something to show. The test takes ten minutes.</p>
+    <div class="g-box">
+      <form id="test-form">
+        <label class="g-check"><input type="checkbox" data-rules="1" data-asks="A named owner"><span>Who answers for it, by name?</span></label>
+        <label class="g-check"><input type="checkbox" data-rules="1" data-asks="A purpose in one sentence"><span>What is it for, in one sentence?</span></label>
+        <label class="g-check"><input type="checkbox" data-rules="3" data-asks="A known identity and decided access"><span>Under whose identity does it run, and what can it reach?</span></label>
+        <label class="g-check"><input type="checkbox" data-rules="4" data-asks="Limits that hold"><span>What may it do without a person, and what stops it from doing more?</span></label>
+        <label class="g-check"><input type="checkbox" data-rules="9" data-asks="A log that someone reads"><span>Who reads what it produces, or its log, and how often?</span></label>
+        <label class="g-check"><input type="checkbox" data-rules="2 9" data-asks="An end date and a stop"><span>When does it end, and who can stop it tonight?</span></label>
+      </form>
+      <div class="g-result" id="test-result" aria-live="polite" data-js hidden></div>
+    </div>
+    <p class="g-note">From chapter 4. The six questions are the six rows of the table in chapter 1, and the eight chapters of Part II are the six questions taken one at a time.</p>
+  </section>
+
+  <!-- 03 -->
+  <section class="wrap g-sec" id="rules" aria-labelledby="rules-h">
+    <p class="eyebrow">03 · The Doctrine</p>
+    <h2 id="rules-h">Ten rules in four groups</h2>
+    <p class="g-intro">The ten rules fall into four groups. The Regime is what an organisation runs in order to live by them, and the ladder measures how far it has come. Choose a rule to see what it says and what to ask.</p>
+
+    <div class="g-groups" id="rule-picker" data-js hidden>
+      <div class="g-group">
+        <span class="g-label">Who answers</span>
+        <button type="button" class="g-rulebtn" data-rule="1"><span class="n">01</span>Owner and purpose</button>
+        <button type="button" class="g-rulebtn" data-rule="2"><span class="n">02</span>End date</button>
+      </div>
+      <div class="g-group">
+        <span class="g-label">What it may do</span>
+        <button type="button" class="g-rulebtn" data-rule="3"><span class="n">03</span>Least access</button>
+        <button type="button" class="g-rulebtn" data-rule="4"><span class="n">04</span>Human up the stack</button>
+        <button type="button" class="g-rulebtn" data-rule="5"><span class="n">05</span>Control by size</button>
+      </div>
+      <div class="g-group">
+        <span class="g-label">How we know</span>
+        <button type="button" class="g-rulebtn" data-rule="6"><span class="n">06</span>The record</button>
+        <button type="button" class="g-rulebtn" data-rule="7"><span class="n">07</span>Proof before trust</button>
+        <button type="button" class="g-rulebtn" data-rule="8"><span class="n">08</span>Change decided</button>
+        <button type="button" class="g-rulebtn" data-rule="9"><span class="n">09</span>Stop and account</button>
+      </div>
+      <div class="g-group">
+        <span class="g-label">Who else is in it</span>
+        <button type="button" class="g-rulebtn" data-rule="10"><span class="n">10</span>The vendor</button>
+      </div>
+    </div>
+
+    <div id="rule-panel" aria-live="polite">
+      <article class="g-rule" id="rule-1" data-rule="1">
+        <span class="n" aria-hidden="true">01</span>
+        <h3>Every agent has an owner and a purpose.</h3>
+        <p class="t">One named person answers for it, and one sentence says what it is for. If nobody can be named, the agent does not run.</p>
+        <blockquote class="g-quote">Under ordinary conditions, silence means the agent continues. Under the Doctrine, silence means the agent comes up for decision.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>Can we name the owner of every agent we run, as a person?</li>
+          <li>Does every agent have a purpose stated in one sentence?</li>
+          <li>What happens on the end date, for a small agent and for a large one?</li>
+          <li>What happens to an agent when its owner changes role or leaves?</li>
+        </ol>
+        <p class="where">Chapter 5, Ownership and the end date. Put it to work with the <a href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download>Agent Register</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-2" data-rule="2">
+        <span class="n" aria-hidden="true">02</span>
+        <h3>Every agent has an end date.</h3>
+        <p class="t">On that date it is renewed or retired. Silence no longer means that it continues.</p>
+        <blockquote class="g-quote">Under ordinary conditions, silence means the agent continues. Under the Doctrine, silence means the agent comes up for decision.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>Can we name the owner of every agent we run, as a person?</li>
+          <li>Does every agent have a purpose stated in one sentence?</li>
+          <li>What happens on the end date, for a small agent and for a large one?</li>
+          <li>What happens to an agent when its owner changes role or leaves?</li>
+        </ol>
+        <p class="where">Chapter 5, Ownership and the end date. Put it to work with the <a href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download>Agent Register</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-3" data-rule="3">
+        <span class="n" aria-hidden="true">03</span>
+        <h3>An agent gets no more access than its job needs.</h3>
+        <p class="t">It has a known identity, and its reach is something someone decided.</p>
+        <blockquote class="g-quote">The attacker does not break in. The attacker gets text in front of the agent.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>For each of our large agents, which of the three identities does it use?</li>
+          <li>Which agents combine private data, outside content and a way to act or send?</li>
+          <li>When were the permissions of our largest agents last reviewed?</li>
+          <li>Who approves a new tool or connection for an agent?</li>
+        </ol>
+        <p class="where">Chapter 6, Access, and the agent that can be talked into things. Try it under <a href="#access">Access</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-4" data-rule="4">
+        <span class="n" aria-hidden="true">04</span>
+        <h3>The human moves up the stack.</h3>
+        <p class="t">People set the limits, receive the exceptions and take the decisions an agent may not. The limits are held outside the agent.</p>
+        <blockquote class="g-quote">The human has not left the loop. The human has moved up the stack, from doing the work to governing it.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>For each important agent, are the tolerances written down with numbers or rules?</li>
+          <li>Is each limit held by something outside the agent?</li>
+          <li>Where a person approves, how often do they change what the agent proposed?</li>
+          <li>Which decisions are being made on agent output without anyone having chosen that?</li>
+        </ol>
+        <p class="where">Chapter 7, The human moves up the stack. Try it under <a href="#limits">Limits</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-5" data-rule="5">
+        <span class="n" aria-hidden="true">05</span>
+        <h3>Control follows size.</h3>
+        <p class="t">How much governance an agent gets depends on what it can reach and what happens when it is wrong.</p>
+        <blockquote class="g-quote">The Doctrine does not ask anyone to prefer judgment to data. It asks them not to wait for data they do not have.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>Have we sized our agents, or are they all treated the same?</li>
+          <li>Have we written the floors, and do they follow our risk appetite?</li>
+          <li>Is the legal classification recorded separately from our own size?</li>
+          <li>When did we last sort the list again in light of what has happened?</li>
+        </ol>
+        <p class="where">Chapter 8, Control follows size. Try it under <a href="#size">Size</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-6" data-rule="6">
+        <span class="n" aria-hidden="true">06</span>
+        <h3>Nothing runs without a record.</h3>
+        <p class="t">If the question “how many agents do we have, and what can they do” takes more than a day to answer, there is no governance yet.</p>
+        <blockquote class="g-quote">How many agents do you have? If the answer takes more than a day, the organisation does not have governance. It has hope.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>Could we answer “how many agents, and what can they do” within one working day?</li>
+          <li>Can we see which data sources and processes each agent is connected to?</li>
+          <li>Who is responsible for the class of personal assistants?</li>
+          <li>Is there any way for an agent to go live without a record?</li>
+        </ol>
+        <p class="where">Chapter 9, The record. Put it to work with the <a href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download>Agent Register</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-7" data-rule="7">
+        <span class="n" aria-hidden="true">07</span>
+        <h3>Proof before trust.</h3>
+        <p class="t">A demonstration is a handful of observations. Evidence is many cases with known answers, run again after every change.</p>
+        <blockquote class="g-quote">A demonstration is five observations. Proof is hundreds of cases with known answers, run again after every change.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>How do we know how our largest agents behave, beyond having seen them work?</li>
+          <li>When was that evidence produced, and against which model version?</li>
+          <li>Would we find out if a vendor replaced the model under one of them?</li>
+          <li>How many changes did we find last quarter, as opposed to approve?</li>
+        </ol>
+        <p class="where">Chapter 10, Proof before trust, and change as a decision.</p>
+      </article>
+
+      <article class="g-rule" id="rule-8" data-rule="8">
+        <span class="n" aria-hidden="true">08</span>
+        <h3>Change is a decision, not an event.</h3>
+        <p class="t">New data, new permissions, a new model or a new purpose are decided by someone, or found and tested when they arrive from outside.</p>
+        <blockquote class="g-quote">A demonstration is five observations. Proof is hundreds of cases with known answers, run again after every change.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>How do we know how our largest agents behave, beyond having seen them work?</li>
+          <li>When was that evidence produced, and against which model version?</li>
+          <li>Would we find out if a vendor replaced the model under one of them?</li>
+          <li>How many changes did we find last quarter, as opposed to approve?</li>
+        </ol>
+        <p class="where">Chapter 10, Proof before trust, and change as a decision.</p>
+      </article>
+
+      <article class="g-rule" id="rule-9" data-rule="9">
+        <span class="n" aria-hidden="true">09</span>
+        <h3>An agent can fail, be stopped and be accounted for.</h3>
+        <p class="t">Incidents are recorded, a named person can stop it, and a log shows what it did.</p>
+        <blockquote class="g-quote">A log does for an agent what minutes do for a meeting. Without one, what the agent did is an anecdote.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>Have we defined what an agent incident is, and has one ever been recorded?</li>
+          <li>Who can stop each large agent, also at night, and has the stop been tried?</li>
+          <li>Does each agent keep a log, and does anyone read it?</li>
+          <li>Could we run our most important agent-supported process without the agent?</li>
+        </ol>
+        <p class="where">Chapter 11, When it goes wrong. Try it under <a href="#incidents">Incidents</a>, and put it to work with the <a href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download>Incident and Stop Log</a>.</p>
+      </article>
+
+      <article class="g-rule" id="rule-10" data-rule="10">
+        <span class="n" aria-hidden="true">10</span>
+        <h3>A vendor’s agent is a vendor relationship.</h3>
+        <p class="t">Data, scope, price, model changes, liability and exit are settled in writing before the agent matters.</p>
+        <blockquote class="g-quote">Almost no agent is free of suppliers. In most cases the organisation has negotiated with none of them about agents.</blockquote>
+        <span class="g-label">Questions to ask</span>
+        <ol>
+          <li>For each agent, which suppliers does it depend on, including the model provider?</li>
+          <li>Have we read the terms that actually govern the agent features we use?</li>
+          <li>What is included in the price, and what is the ceiling?</li>
+          <li>Would we be told before a model is replaced, and who pays for testing again?</li>
+          <li>Could we move our most important agent, and what would it take?</li>
+        </ol>
+        <p class="where">Chapter 12, The vendor’s agent. Put it to work with the <a href="../tools/The-Agent-Doctrine-Supplier-Terms-Checklist-v1.0.docx" download>Supplier Terms Checklist</a>.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="wrap g-sec" id="access" aria-labelledby="access-h">
+    <p class="eyebrow">04 · Rule 03 in practice</p>
+    <h2 id="access-h">Three things that should not meet</h2>
+    <p class="g-intro">The risk is highest when three things come together in one agent: access to private data, exposure to content from outside, and a way to send something out or to act. Each alone is manageable.</p>
+    <div class="g-box" id="access-widget" data-js hidden>
+      <div class="g-cols">
+        <div>
+          <span class="g-label">Start from an agent in the book</span>
+          <div class="g-chips" style="margin-top:12px" role="group" aria-label="Example agents">
+            <button type="button" class="g-chip" data-preset="meeting" aria-pressed="false">Meeting assistant</button>
+            <button type="button" class="g-chip" data-preset="research" aria-pressed="false">Research agent</button>
+            <button type="button" class="g-chip" data-preset="invoice" aria-pressed="false">Invoice agent</button>
+          </div>
+          <p class="g-note" id="access-preset-text">Or tick what your own agent has.</p>
+          <div style="margin-top:20px">
+            <button type="button" class="g-toggle" data-part="private" aria-pressed="false"><span class="box" aria-hidden="true"></span>Access to private data</button>
+            <button type="button" class="g-toggle" data-part="outside" aria-pressed="false"><span class="box" aria-hidden="true"></span>Content from outside</button>
+            <button type="button" class="g-toggle" data-part="act" aria-pressed="false"><span class="box" aria-hidden="true"></span>A way to send or act</button>
+          </div>
+        </div>
+        <div>
+          <svg class="g-venn" id="access-venn" viewBox="0 0 320 300" role="img" aria-labelledby="venn-t">
+            <title id="venn-t">Three overlapping circles: private data, content from outside, a way to act</title>
+            <circle data-part="private" cx="118" cy="112" r="78"/>
+            <circle data-part="outside" cx="202" cy="112" r="78"/>
+            <circle data-part="act" cx="160" cy="184" r="78"/>
+            <circle class="core" cx="160" cy="134" r="27"/>
+            <text x="86" y="100" text-anchor="middle">Private</text>
+            <text x="86" y="117" text-anchor="middle">data</text>
+            <text x="238" y="100" text-anchor="middle">Content</text>
+            <text x="238" y="117" text-anchor="middle">from outside</text>
+            <text x="160" y="232" text-anchor="middle">A way to act</text>
+            <text class="core-t" x="160" y="130" text-anchor="middle">All</text>
+            <text class="core-t" x="160" y="146" text-anchor="middle">three</text>
+          </svg>
+          <div class="g-result" id="access-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <h3 class="g-h3">Whose identity is it using?</h3>
+    <p class="g-intro">An agent acts under one of three identities, and the difference decides most of its risk.</p>
+    <div class="g-ids">
+      <div><p class="t">Its own</p><p>It has a service identity with permissions granted to it. Its reach can be reviewed and withdrawn.</p></div>
+      <div><p class="t">Its builder’s</p><p>It runs with the credentials of the person who made it. Everyone who uses it borrows that person’s access.</p></div>
+      <div><p class="t">Its user’s</p><p>It acts with the access of whoever is talking to it, including everything that was shared too widely years ago.</p></div>
+    </div>
+    <p class="g-note">From chapter 6. An agent of any consequence has its own identity. It gets what its purpose sentence requires and no more.</p>
+  </section>
+
+  <!-- 05 -->
+  <section class="wrap g-sec" id="limits" aria-labelledby="limits-h">
+    <p class="eyebrow">05 · Rule 04 in practice</p>
+    <h2 id="limits-h">A limit holds when it sits outside the agent</h2>
+    <p class="g-intro">Humans do not supervise agents keystroke by keystroke. They set the limits, receive the exceptions and take the decisions the agent is not allowed to take.</p>
+    <div class="g-cols" style="margin-top:32px">
+      <div class="g-box" style="margin-top:0" id="stack-widget" data-js hidden>
+        <div class="g-seg" role="group" aria-label="Where the person sits">
+          <button type="button" data-mode="loop" aria-pressed="true">In the loop</button>
+          <button type="button" data-mode="stack" aria-pressed="false">Up the stack</button>
+        </div>
+        <div class="g-stack" id="stack-view" aria-live="polite"></div>
+      </div>
+      <div>
+        <span class="g-label">Six tolerances for an agent</span>
+        <ul class="g-tol">
+          <li><span class="k">Purpose</span><span>What kind of task is outside its job?</span></li>
+          <li><span class="k">Data</span><span>What may it read, and which of its sources are untrusted?</span></li>
+          <li><span class="k">Action</span><span>What may it do alone, and what may it only propose?</span></li>
+          <li><span class="k">Value</span><span>Above what amount or consequence must a person decide?</span></li>
+          <li><span class="k">Volume</span><span>How much activity is normal, and what level is a warning?</span></li>
+          <li><span class="k">Escalation</span><span>Which conditions send a case to a person?</span></li>
+        </ul>
+        <p class="g-note">Each needs a number or a rule. “Low-value transactions” is an adjective. “Below 5,000, and never to a new recipient” is a tolerance.</p>
+      </div>
+    </div>
+    <h3 class="g-h3">Where is your limit held?</h3>
+    <p class="g-intro">Take one limit on one agent and say what holds it in place.</p>
+    <div class="g-box" id="held-widget" data-js hidden>
+      <form id="held-form">
+        <label class="g-radio"><input type="radio" name="held" value="identity"><span>The agent’s permissions<small>Its identity cannot do the thing.</small></span></label>
+        <label class="g-radio"><input type="radio" name="held" value="check"><span>A check outside the model<small>An ordinary rule in ordinary software refuses or pauses.</small></span></label>
+        <label class="g-radio"><input type="radio" name="held" value="person"><span>A person who must act<small>A person must act before anything takes effect.</small></span></label>
+        <label class="g-radio"><input type="radio" name="held" value="instructions"><span>The agent’s instructions<small>The limit exists only in the instructions.</small></span></label>
+      </form>
+      <div class="g-result" id="held-result" aria-live="polite" hidden></div>
+    </div>
+    <noscript><p class="g-note">A limit holds in one of three ways: the agent’s identity cannot do the thing, a check outside the model refuses or pauses, or a person must act before anything takes effect. A limit that exists only in an agent’s instructions is a request.</p></noscript>
+    <p class="g-note">From chapter 7 and Appendix A.6.</p>
+  </section>
+
+  <!-- 06 -->
+  <section class="wrap g-sec" id="size" aria-labelledby="size-h">
+    <p class="eyebrow">06 · Rule 05 in practice</p>
+    <h2 id="size-h">Control follows size</h2>
+    <p class="g-intro">Sizing works on two parts: a small number of overriding facts, the floors, and comparison for the rest. Each size keeps the controls of the one before and adds its own.</p>
+    <div class="g-box" id="size-widget" data-js hidden>
+      <span class="g-label">Five agents on a table</span>
+      <div class="g-chips" style="margin-top:12px" role="group" aria-label="Example agents from chapter 8">
+        <button type="button" class="g-chip" data-agent="A" aria-pressed="false">A Meeting summaries</button>
+        <button type="button" class="g-chip" data-agent="B" aria-pressed="false">B Personnel policies</button>
+        <button type="button" class="g-chip" data-agent="C" aria-pressed="false">C Customer complaints</button>
+        <button type="button" class="g-chip" data-agent="D" aria-pressed="false">D Supplier invoices</button>
+        <button type="button" class="g-chip" data-agent="E" aria-pressed="false">E Production monitoring</button>
+      </div>
+      <p class="g-note" id="size-agent-text">Or size an agent of your own: floors first, then compare.</p>
+      <div class="g-cols" style="margin-top:28px">
+        <div>
+          <span class="g-label">1. Floors first</span>
+          <div id="size-floors" style="margin-top:8px">
+            <label class="g-check"><input type="checkbox" data-floor="3"><span>Acts on its own with write access to financial records<span class="k">At least Large</span></span></label>
+            <label class="g-check"><input type="checkbox" data-floor="3"><span>Produces output that reaches customers without review<span class="k">At least Large</span></span></label>
+            <label class="g-check"><input type="checkbox" data-floor="3"><span>Reads confidential or sensitive personal data at scale<span class="k">At least Large</span></span></label>
+            <label class="g-check"><input type="checkbox" data-floor="4"><span>Supports a critical function<span class="k">At least Extra large</span></span></label>
+            <label class="g-check"><input type="checkbox" data-floor="4"><span>Can change production systems on its own<span class="k">At least Extra large</span></span></label>
+          </div>
+        </div>
+        <div>
+          <span class="g-label">2. Then compare</span>
+          <p class="g-note" style="margin-top:8px">What can it touch, and what happens if it is wrong and nobody notices for a month?</p>
+          <div class="g-bars g-bars-4" role="group" aria-label="Size">
+            <button type="button" class="g-bar h1" data-size="1" aria-pressed="false"><span class="lv" aria-hidden="true">S</span>Small</button>
+            <button type="button" class="g-bar h2" data-size="2" aria-pressed="false"><span class="lv" aria-hidden="true">M</span>Medium</button>
+            <button type="button" class="g-bar h3" data-size="3" aria-pressed="false"><span class="lv" aria-hidden="true">L</span>Large</button>
+            <button type="button" class="g-bar h4" data-size="4" aria-pressed="false"><span class="lv" aria-hidden="true">XL</span>Extra large</button>
+          </div>
+          <div class="g-result" id="size-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <noscript><p class="g-note">A small agent needs an owner, a purpose, an end date and a place in the record. A medium one also needs written limits and a log. A large one needs its changes approved, its work tested, its log read, a named sponsor and a stop that has been tried. An extra large one gets the same with less room: its tests are reviewed by someone outside, and it comes up for renewal more often.</p></noscript>
+    <p class="g-note">From chapter 8, figure 8.1. The floors are the organisation’s own and follow the risk appetite the board has set. Five to eight floors are enough. Appendix A.5 has the full table of controls by size, and the <a href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download>Agent Register</a> checks each entry against it.</p>
+  </section>
+
+  <!-- 07 -->
+  <section class="wrap g-sec" id="incidents" aria-labelledby="incidents-h">
+    <p class="eyebrow">07 · Rule 09 in practice</p>
+    <h2 id="incidents-h">An agent can have an incident</h2>
+    <p class="g-intro">Most organisations have never had an agent incident, because they have never defined one. That is not the same as being safe. The Doctrine defines five.</p>
+    <ul class="g-types">
+      <li><strong>Out of purpose</strong>The agent did something its purpose sentence does not cover.</li>
+      <li><strong>Out of bounds</strong>It reached data or used a permission it should not have.</li>
+      <li><strong>Wrong and relied upon</strong>Its output was incorrect and someone acted on it.</li>
+      <li><strong>Silent failure</strong>It stopped or degraded, and nobody noticed.</li>
+      <li><strong>Manipulated</strong>Someone steered it through its input.</li>
+    </ul>
+    <div class="g-box" id="incident-widget" data-js hidden>
+      <span class="g-label" id="incident-count">Case 1 of 5</span>
+      <p class="g-case" id="incident-case"></p>
+      <div id="incident-options" style="margin-top:16px" role="group" aria-label="Which type of incident is it?"></div>
+      <div class="g-result" id="incident-result" aria-live="polite" hidden></div>
+      <div class="g-pager"><button type="button" class="btn btn-dark" id="incident-next" hidden>Next case</button></div>
+    </div>
+    <p class="g-note">From chapter 11. Near misses belong in the record as well. The <a href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download>Incident and Stop Log</a> has the five types, near misses and stop tests.</p>
+  </section>
+
+  <!-- 08 -->
+  <section class="wrap g-sec" id="ladder" aria-labelledby="ladder-h">
+    <p class="eyebrow">08 · The Regime</p>
+    <h2 id="ladder-h">The ladder</h2>
+    <p class="g-intro">Compliance is a photograph taken for someone else. Maturity is a position you hold for yourself. The ladder has five levels, each reached by a test, and it is measured on top of legal compliance, never in place of it.</p>
+
+    <div class="g-bars" id="level-picker" role="group" aria-label="Levels of the ladder" data-js hidden>
+      <button type="button" class="g-bar h1" data-level="1" aria-pressed="false"><span class="lv" aria-hidden="true">1</span>Unknown</button>
+      <button type="button" class="g-bar h2" data-level="2" aria-pressed="false"><span class="lv" aria-hidden="true">2</span>Listed</button>
+      <button type="button" class="g-bar h3" data-level="3" aria-pressed="false"><span class="lv" aria-hidden="true">3</span>Owned</button>
+      <button type="button" class="g-bar h4" data-level="4" aria-pressed="false"><span class="lv" aria-hidden="true">4</span>Controlled</button>
+      <button type="button" class="g-bar h5" data-level="5" aria-pressed="false"><span class="lv" aria-hidden="true">5</span>Assured</button>
+    </div>
+
+    <div id="level-panel" aria-live="polite">
+      <article class="g-level" data-level="1">
+        <h3>1 Unknown</h3>
+        <dl>
+          <div><dt>What is true</dt><dd>The organisation cannot say how many agents it has.</dd></div>
+          <div><dt>The test</dt><dd>None. It is the starting point.</dd></div>
+          <div><dt>What it means</dt><dd>Many organisations will find themselves here. That is not a criticism. It is where every organisation stood with every new technology before it decided to look.</dd></div>
+        </dl>
+      </article>
+      <article class="g-level" data-level="2">
+        <h3>2 Listed</h3>
+        <dl>
+          <div><dt>What is true</dt><dd>There is a complete and current list of them.</dd></div>
+          <div><dt>The test</dt><dd>Reconcile with the platforms, both ways.</dd></div>
+          <div><dt>What it buys</dt><dd>It changes the conversation with outsiders. An organisation that can produce its list on request is treated differently by auditors, supervisors and customers.</dd></div>
+          <div><dt>What the step takes</dt><dd>Detective work. It takes weeks, and it needs no decisions from anyone senior.</dd></div>
+        </dl>
+      </article>
+      <article class="g-level" data-level="3">
+        <h3>3 Owned</h3>
+        <dl>
+          <div><dt>What is true</dt><dd>Every agent has an owner, a purpose, an end date and a size.</dd></div>
+          <div><dt>The test</dt><dd>A sample of entries and acceptances.</dd></div>
+          <div><dt>What it buys</dt><dd>It removes the orphans. From here on, agents come up for decision on their own, and somebody can always be called.</dd></div>
+          <div><dt>What the step takes</dt><dd>Conversation. Someone has to sit down with a manager for each agent that matters and ask whether they will answer for it.</dd></div>
+        </dl>
+      </article>
+      <article class="g-level" data-level="4">
+        <h3>4 Controlled</h3>
+        <dl>
+          <div><dt>What is true</dt><dd>Limits, tests, change control, incident handling and logs are operating.</dd></div>
+          <div><dt>The test</dt><dd>A year of records for the large agents.</dd></div>
+          <div><dt>What it buys</dt><dd>The organisation can survive an incident. It will know what happened, be able to stop it, and be able to show afterwards what it did.</dd></div>
+          <div><dt>What the step takes</dt><dd>The heavy one. Limits, tests, logs, change control and a stop that works have to be built for the large agents.</dd></div>
+        </dl>
+      </article>
+      <article class="g-level" data-level="5">
+        <h3>5 Assured</h3>
+        <dl>
+          <div><dt>What is true</dt><dd>The level is confirmed independently, suppliers are covered, and findings lead to decisions.</dd></div>
+          <div><dt>The test</dt><dd>Audit review and supplier terms.</dd></div>
+          <div><dt>What it buys</dt><dd>The board can rely on what it is told, because someone who does not run the agents has checked.</dd></div>
+          <div><dt>What the step takes</dt><dd>Independence. The work is modest. What makes it hard is that it invites findings.</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="g-note">Not every organisation needs level 5. The target should follow what the agents can reach. Choosing it is a decision about risk appetite, and it belongs to the board and to the minutes.</p>
+
+    <h3 class="g-h3">Place your own organisation</h3>
+    <p class="g-intro">One question for each of the six dimensions. Answer yes only where there is something to show.</p>
+    <div class="g-box" id="place-widget" data-js hidden>
+      <div id="place-questions">
+        <div class="g-q" data-dim="Inventory"><span class="d">Inventory</span><p>Do we have a list of agents that was compared with the platforms in the last quarter?</p></div>
+        <div class="g-q" data-dim="Ownership"><span class="d">Ownership</span><p>Do we know who built each agent on the list?</p></div>
+        <div class="g-q" data-dim="Access and limits"><span class="d">Access and limits</span><p>Do we know which identity each agent runs under?</p></div>
+        <div class="g-q" data-dim="Assurance"><span class="d">Assurance</span><p>Do we know which agents were tested before they went live?</p></div>
+        <div class="g-q" data-dim="Response"><span class="d">Response</span><p>Do we know who can switch each agent off?</p></div>
+        <div class="g-q" data-dim="Suppliers"><span class="d">Suppliers</span><p>Do we know which suppliers and models each agent depends on?</p></div>
+      </div>
+      <div class="g-result" id="place-result" aria-live="polite"></div>
+    </div>
+    <noscript><p class="g-note">A no to any of the six puts that dimension on level 1, and the organisation with it. Six answers of yes, with something to show for each, put it on level 2.</p></noscript>
+    <p class="g-note">From chapter 14. The <a href="../tools/The-Agent-Doctrine-Ladder-Assessment-v1.0.xlsx" download>Ladder Assessment</a> continues from here, with twenty-four questions that place each dimension on levels 1 to 5.</p>
+
+    <h3 class="g-h3">Three ways to fool yourself</h3>
+    <div class="g-fool">
+      <div><p class="t">Skip levels</p><p>Starting at level 4, because change control and incident processes feel like real governance. Without a complete list and real owners, they have nothing to act on.</p></div>
+      <div><p class="t">Round up</p><p>Reporting the level that is almost reached. “We are essentially at level 3” means level 2. The levels are discrete, so a level means that the test was passed.</p></div>
+      <div><p class="t">Report the best area</p><p>Finance may be on level 3 while marketing is on level 1. The honest report gives the lowest level among the areas that matter and shows the spread.</p></div>
+    </div>
+  </section>
+
+  <!-- 09 -->
+  <section class="wrap g-sec" id="board" aria-labelledby="board-h">
+    <p class="eyebrow">09 · For the board and executive management</p>
+    <h2 id="board-h">What the board answers for</h2>
+    <p class="g-intro">A board does not need to learn how language models work. It needs enough knowledge to judge the risk, to set an appetite for it and to tell a good answer from a poor one.</p>
+
+    <h3 class="g-h3">Four things to know about agents</h3>
+    <ol class="rules" style="margin-top:16px">
+      <li><span class="n" aria-hidden="true">1</span><span>They act with the organisation’s access.</span></li>
+      <li><span class="n" aria-hidden="true">2</span><span>Their behaviour varies.</span></li>
+      <li><span class="n" aria-hidden="true">3</span><span>They can be steered by what they read.</span></li>
+      <li><span class="n" aria-hidden="true">4</span><span>They change when their suppliers change them.</span></li>
+    </ol>
+    <p class="g-note">With that, a board member can hear the difference between “we have tested it” and “we ran three hundred known cases last month and it passed 96 percent of them”.</p>
+
+    <h3 class="g-h3">Three decisions that are the board’s</h3>
+    <p class="g-intro">The board is being asked to do three things, and to refuse to do the rest.</p>
+    <div class="g-fool">
+      <div><p class="t">1 The appetite for delegation</p><p>How much the organisation is willing to delegate to software. That is a decision about risk appetite, and the appetite is the board’s.</p></div>
+      <div><p class="t">2 The level on the ladder</p><p>The level the organisation should reach on the ladder, and by when.</p></div>
+      <div><p class="t">3 Agents in critical functions</p><p>The approval of each agent that acts on its own in a critical function, if the appetite reserves that for the board.</p></div>
+    </div>
+    <p class="g-note">Everything else belongs to management: which agents to build, who owns them, what their limits are, how they are tested.</p>
+
+    <h3 class="g-h3">An appetite for delegation</h3>
+    <p class="g-intro">A board that has approved a risk appetite for operational and technology risk has most of what it needs. What is usually missing is a statement about delegation to software. It could read like this:</p>
+    <blockquote class="g-quote g-quote-long">We accept agents that draft and propose in all functions. We accept agents that act on their own only where the action can be reversed, the value is below a limit we have set, and a named person can stop the agent. We do not accept agents that act on their own in critical functions without our approval of each.</blockquote>
+    <p class="g-note">The wording will differ from one organisation to the next. What matters is that it exists and that it is the board’s.</p>
+    <div class="g-box" id="zone-widget">
+      <div data-js hidden>
+        <span class="g-label">Sort an agent by this statement</span>
+        <div style="margin-top:12px">
+          <div class="g-seg" role="group" aria-label="What the agent does" id="zone-does">
+            <button type="button" data-v="proposes" aria-pressed="false">Drafts and proposes</button>
+            <button type="button" data-v="acts" aria-pressed="false">Acts on its own</button>
+          </div>
+        </div>
+        <div style="margin-top:12px" id="zone-where-wrap" hidden>
+          <div class="g-seg" role="group" aria-label="Where it acts" id="zone-where">
+            <button type="button" data-v="other" aria-pressed="false">Outside critical functions</button>
+            <button type="button" data-v="critical" aria-pressed="false">In a critical function</button>
+          </div>
+        </div>
+        <div id="zone-conds" style="margin-top:20px" hidden>
+          <span class="g-label">Tick the conditions that hold</span>
+          <label class="g-check"><input type="checkbox"><span>The action can be reversed</span></label>
+          <label class="g-check"><input type="checkbox"><span>The value is below a limit we have set</span></label>
+          <label class="g-check"><input type="checkbox"><span>A named person can stop the agent</span></label>
+        </div>
+      </div>
+      <div class="g-zones" id="zones">
+        <div data-zone="1"><span class="who">Management decides</span><strong>Drafts and proposes</strong>Accepted in every function. A person stands before the result.</div>
+        <div data-zone="2"><span class="who">Within the board’s terms</span><strong>Acts on its own</strong>Accepted on three conditions: reversible, below a set value, and a named person can stop it.</div>
+        <div data-zone="3"><span class="who">The board decides</span><strong>Acts in critical functions</strong>Not accepted without approval. The board approves each agent.</div>
+      </div>
+      <div class="g-result" id="zone-result" aria-live="polite" data-js hidden></div>
+    </div>
+    <p class="g-note">From chapter 4, figure 4.1. An agent moves from one zone to the next only by a decision, and the further down it sits, the higher that decision is taken.</p>
+
+    <h3 class="g-h3">Ten questions</h3>
+    <p class="g-intro">These are the questions a board can put to executive management at its next meeting. A weak answer is a department where a name was asked for, a promise where a number was asked for, or the assurance that there is a human in the loop. A good answer has a name, a date and something that can be shown.</p>
+    <div class="g-box">
+      <span class="g-label" data-js hidden>Tick each question that got a good answer</span>
+      <form id="ten-form">
+        <label class="g-check"><input type="checkbox"><span>How many agents do we have, and how do we know the list is complete?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Who owns each of the large ones, by name?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Which agents act on their own, which only propose, and what has changed for the people who did that work before?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Which agents support critical functions?</span></label>
+        <label class="g-check"><input type="checkbox"><span>What can our largest agents reach, and who decided that?</span></label>
+        <label class="g-check"><input type="checkbox"><span>How were they tested before they went live, and after the last change?</span></label>
+        <label class="g-check"><input type="checkbox"><span>What happened the last time one of them was wrong?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Who can stop them, also at night, when was that last tried, and how is the work done while they are stopped?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Which suppliers and models do they depend on, and what do our terms say?</span></label>
+        <label class="g-check"><input type="checkbox"><span>Which level are we on, who confirmed it, and which level have we decided to reach?</span></label>
+      </form>
+      <div class="g-result" id="ten-result" aria-live="polite" data-js hidden></div>
+    </div>
+
+    <h3 class="g-h3">Hear the difference</h3>
+    <div class="g-box" id="answer-widget">
+      <div class="g-seg" role="group" aria-label="Question" data-js hidden>
+        <button type="button" data-q="1" aria-pressed="true">Question 1</button>
+        <button type="button" data-q="8" aria-pressed="false">Question 8</button>
+      </div>
+      <div class="g-answer" data-q="1">
+        <p class="g-case">How many agents do we have, and how do we know the list is complete?</p>
+        <div class="g-cols" style="margin-top:20px;gap:16px">
+          <div class="g-ans weak"><span class="g-label">A weak answer</span><p>“IT has a good overview, and we are working on a complete inventory as part of the AI programme.”</p></div>
+          <div class="g-ans good"><span class="g-label">A good answer</span><p>“Sixty-three as of the end of October. We compared the record with what the three platforms show. Five were running that we had not recorded. Four of those are now recorded and one has been switched off.”</p></div>
+        </div>
+        <p class="g-note">The second answer is not good because the news is comfortable. It is good because it has a count, a date, a method and a difference, and because each of them could be checked by someone who doubted it.</p>
+      </div>
+      <div class="g-answer" data-q="8">
+        <p class="g-case">Who can stop them, also at night, when was that last tried, and how is the work done while they are stopped?</p>
+        <div class="g-cols" style="margin-top:20px;gap:16px">
+          <div class="g-ans weak"><span class="g-label">A weak answer</span><p>A weak answer names the IT department.</p></div>
+          <div class="g-ans good"><span class="g-label">A good answer</span><p>A good answer names two people for each large agent and says that the stop for the complaint agent was tried in September and took nine minutes. It also says how complaints are handled while the agent is stopped.</p></div>
+        </div>
+      </div>
+    </div>
+    <blockquote class="g-quote">Asking is oversight. Answering is management.</blockquote>
+
+    <h3 class="g-h3">The board’s quarterly page</h3>
+    <p class="g-intro">What the board should see of the rest is one page each quarter, and the answers to the ten questions.</p>
+    <ol class="g-page">
+      <li>Level on the ladder, target level, date of evidence, confirmed by</li>
+      <li>Agents by size, with change since last quarter</li>
+      <li>Agents supporting critical functions</li>
+      <li>Agents past their end date, by name</li>
+      <li>Changes approved and changes found</li>
+      <li>Incidents and near misses, and what changed afterwards</li>
+      <li>Supplier and model concentration</li>
+      <li>Waivers in force</li>
+      <li>Decisions requested</li>
+    </ol>
+    <p class="g-note">From Appendix A.13. The page goes to management and to the board each quarter. <a href="../tools/The-Agent-Doctrine-Board-Quarterly-Page-v1.0.docx" download>The Board’s Quarterly Page</a> is the template.</p>
+
+    <h3 class="g-h3">What waiting costs</h3>
+    <p class="g-intro">Three situations show the cost, and none of them appears in a budget.</p>
+    <div class="g-fool">
+      <div><p class="t">The inventory does not exist</p><p>A supervisor or an auditor asks for the inventory of agents and it does not exist. A team spends weeks reconstructing it, and the organisation is asked more questions afterwards than it would have been otherwise.</p></div>
+      <div><p class="t">Wrong and relied upon for a month</p><p>An agent is wrong and relied upon for a month before anyone notices. The organisation has to find every case, contact the people affected and explain why nobody was checking.</p></div>
+      <div><p class="t">The terms are silent</p><p>A supplier changes a model or a price, and the terms turn out to be silent. The organisation pays, because the alternative is to rebuild.</p></div>
+    </div>
+    <p class="g-note">From chapter 4.</p>
+  </section>
+
+  <!-- 10 -->
+  <section class="wrap g-sec" id="start" aria-labelledby="start-h">
+    <p class="eyebrow">10 · Where to start</p>
+    <h2 id="start-h">The first ninety days</h2>
+    <p class="g-intro">The first round covers agents that have their own access or act on their own. Before day 1, three decisions are needed from executive management: who coordinates, which existing forum takes agent decisions, and the terms of the amnesty.</p>
+    <ol class="rules" style="margin-top:32px">
+      <li><span class="n" aria-hidden="true">30</span><span><strong>Days 1 to 30.</strong> Inventory from all sources. Amnesty for unregistered agents. Existing incident duties apply from day one. Result: a first list.</span></li>
+      <li><span class="n" aria-hidden="true">60</span><span><strong>Days 31 to 60.</strong> Owner, purpose, end date and size for every agent in scope. Floors agreed with the risk function. Result: level 3 for agents in scope.</span></li>
+      <li><span class="n" aria-hidden="true">90</span><span><strong>Days 61 to 90.</strong> Identity and limits for large agents. Stop holders named. First page to the board. Result: a basis for the board’s ten questions.</span></li>
+    </ol>
+
+    <h3 class="g-h3">Ninety days at the insurer</h3>
+    <p class="g-intro">The book follows one invented organisation through the plan. Each square is one agent.</p>
+    <div class="g-box g-box-soft" id="story-widget" data-js hidden>
+      <div class="g-cols">
+        <div>
+          <div class="g-grid63" id="story-grid" aria-hidden="true"></div>
+          <ul class="g-legend" id="story-legend"></ul>
+        </div>
+        <div class="g-story" id="story-text" aria-live="polite"></div>
+      </div>
+      <div class="g-pager">
+        <button type="button" class="btn btn-line" id="story-prev">Back</button>
+        <button type="button" class="btn btn-dark" id="story-next">Next</button>
+      </div>
+    </div>
+    <p class="g-note">From chapter 13 and Appendix A.1. The insurer is not a real organisation.</p>
+
+    <h3 class="g-h3">Seven tools and the book</h3>
+    <p class="g-intro">Each tool is a template with an example from the book. They are free to use and adapt, with no sign-up.</p>
+    <div class="cards" style="margin-top:24px">
+      <a class="card" href="../tools/The-Agent-Doctrine-First-90-Days-v1.0.xlsx" download><span class="d">Excel · Start</span><span class="t">First 90 Days</span><span class="s">The three decisions before day 1, the plan, and the result each period must reach.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download><span class="d">Excel · Start</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Ladder-Assessment-v1.0.xlsx" download><span class="d">Excel · Measure</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Cost-Measurement-v1.0.xlsx" download><span class="d">Excel · Measure</span><span class="t">Cost Measurement</span><span class="s">Hours and other costs, for the first ninety days and per year afterwards.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download><span class="d">Excel · Run</span><span class="t">Incident and Stop Log</span><span class="s">The five incident types, near misses and stop tests.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Supplier-Terms-Checklist-v1.0.docx" download><span class="d">Word · Run</span><span class="t">Supplier Terms Checklist</span><span class="s">The twelve areas that the terms with a vendor must make clear.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Board-Quarterly-Page-v1.0.docx" download><span class="d">Word · Run</span><span class="t">The Board’s Quarterly Page</span><span class="s">The nine lines the board sees each quarter.</span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-dark" href="../The-Agent-Doctrine.pdf">Download the book (PDF)</a>
+      <a class="btn btn-line" href="../">About the book</a>
+    </div>
+    <p class="small" style="margin-top:20px;max-width:760px">The guide quotes and adapts The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="name">Michael Elkær Meisner</p>
+      <p style="margin-top:6px">Executive advisor, Denmark</p>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/mmeis/">LinkedIn</a>
+      <a href="../../privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
