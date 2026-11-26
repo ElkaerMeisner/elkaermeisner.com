@@ -18,22 +18,39 @@
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/site.css">
-<link rel="stylesheet" href="../../assets/guide.css?v=20261126b">
-<link rel="stylesheet" href="../../assets/tools.css?v=20261126b">
+<link rel="stylesheet" href="../../assets/guide.css?v=20261126c">
+<link rel="stylesheet" href="../../assets/tools.css?v=20261126c">
+<style>
+.plan-bar{display:none}
+.plan-only .site-header,.plan-only .site-footer,.plan-only .t-hero,.plan-only .g-nav,.plan-only .no-print{display:none!important}
+.plan-only .g-sec,.plan-only #plan{padding-top:0!important}
+.plan-only .plan-bar{display:flex;flex-wrap:wrap;gap:10px;padding:16px 0}
+.plan-only .plan-bar .btn{min-height:44px;padding:0 18px;font-size:15px;cursor:pointer}
+.plan-only .t-plan{margin-top:0;margin-bottom:48px}
+.plan-printing .plan-bar{display:none!important}
+.plan-printing .g-sec,.plan-printing #plan{padding-bottom:0!important}
+.plan-printing .wrap{max-width:none;padding-left:3vw;padding-right:3vw}
+.plan-printing .t-plan{border:0;padding:0;margin:0;max-width:none;font-size:1.5vw;line-height:1.36}
+.plan-printing .t-plan-title{font-size:1.6em}
+.plan-printing .t-plan h4{font-size:1.2em;margin:.9em 0 0}
+.plan-printing .t-plan ul{font-size:1em;margin:.35em 0 0;padding-left:1.6em}
+.plan-printing .t-plan li{margin-top:.18em}
+.plan-printing .t-plan p{font-size:1em;margin-top:.35em}
+.plan-printing .t-plan p.src{font-size:.8em;margin-top:.9em}
+</style>
 <style media="print">
 @page{size:A4;margin:14mm}
-.site-header,.site-footer,.t-hero,.g-nav,.no-print{display:none!important}
-body{font-size:10pt;line-height:1.4;background:#fff}
+.site-header,.site-footer,.t-hero,.g-nav,.no-print,.plan-bar{display:none!important}
+body{background:#fff}
 .g-sec,#plan{padding:0!important;margin:0!important}
-.wrap{max-width:none;padding-left:0;padding-right:0}
+.wrap{max-width:none;padding-left:0!important;padding-right:0!important}
 .t-plan{border:0!important;padding:0!important;margin:0!important;max-width:none!important}
-.t-plan-title{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:15pt;margin:0}
-.t-plan h4{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:11pt;margin:10px 0 0;break-after:avoid}
-.t-plan ul{margin:4px 0 0;padding-left:16px;font-size:9pt;line-height:1.38;color:#222}
-.t-plan li{margin-top:2px}
-.t-plan li strong{font-weight:600;color:#000}
-.t-plan p{margin:4px 0 0;font-size:9pt}
-.t-plan p.src{margin-top:10px;font-size:7.5pt;color:#555}
+body:not(.plan-printing) .t-plan-title{font-size:15pt;margin:0}
+body:not(.plan-printing) .t-plan h4{font-size:11pt;margin:10px 0 0;break-after:avoid}
+body:not(.plan-printing) .t-plan ul{margin:4px 0 0;padding-left:16px;font-size:9pt;line-height:1.38}
+body:not(.plan-printing) .t-plan li{margin-top:2px}
+body:not(.plan-printing) .t-plan p{margin:4px 0 0;font-size:9pt}
+body:not(.plan-printing) .t-plan p.src{margin-top:10px;font-size:7.5pt}
 </style>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-M3YlUIsw4hSc9hp3vxf2L.js"></script>
@@ -41,7 +58,7 @@ body{font-size:10pt;line-height:1.4;background:#fff}
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-<script defer src="../../assets/adapt.js?v=20261126b"></script>
+<script defer src="../../assets/adapt.js?v=20261126c"></script>
 </head>
 <body class="adapt-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -99,6 +116,10 @@ body{font-size:10pt;line-height:1.4;background:#fff}
       <button type="button" class="btn btn-line" id="adapt-print">Print the plan</button>
     </div>
     <p class="t-copy-note no-print" id="adapt-note" aria-live="polite"></p>
+    <div class="plan-bar" id="plan-bar">
+      <button type="button" class="btn btn-dark" id="plan-print">Print</button>
+      <button type="button" class="btn btn-line" id="plan-back">Back to the guide</button>
+    </div>
     <div class="t-plan" id="adapt-plan"></div>
     <p class="small no-print" style="max-width:760px;margin-top:24px;padding-bottom:104px">The guide quotes The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
   </section>

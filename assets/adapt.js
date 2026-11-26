@@ -375,7 +375,42 @@
     var ok = function (v) { note.textContent = v ? 'Copied. Paste it into a mail or a document.' : 'Copying is not available here. Select the text of the plan instead.'; };
     try { navigator.clipboard.writeText(planText(planData())).then(function () { ok(true); }, function () { ok(false); }); } catch (e) { ok(false); }
   });
-  $('#adapt-print').addEventListener('click', function () { try { window.print(); } catch (e) { note.textContent = 'Printing is not available here.'; } });
+  /* Printing: the page itself is switched to show only the plan, so that it prints
+     the same way in browsers that ignore print styles. */
+  var body = document.body;
+  function restore() { body.classList.remove('plan-printing'); }
+  function printPlan() {
+    body.classList.add('plan-only');
+    body.classList.add('plan-printing');
+    window.scrollTo(0, 0);
+    void body.offsetHeight;
+    var t0 = Date.now(), armed = false;
+    var done = function () {
+      if (armed) return;
+      armed = true;
+      restore();
+      window.removeEventListener('afterprint', onAfter);
+      document.removeEventListener('pointerdown', done, true);
+      document.removeEventListener('touchstart', done, true);
+      document.removeEventListener('keydown', done, true);
+    };
+    var onAfter = function () { if (Date.now() - t0 > 1000) done(); };
+    window.addEventListener('afterprint', onAfter);
+    setTimeout(function () {
+      document.addEventListener('pointerdown', done, true);
+      document.addEventListener('touchstart', done, true);
+      document.addEventListener('keydown', done, true);
+    }, 700);
+    try { window.print(); } catch (e) { done(); note.textContent = 'Printing is not available here.'; }
+  }
+  $('#adapt-print').addEventListener('click', printPlan);
+  $('#plan-print').addEventListener('click', printPlan);
+  $('#plan-back').addEventListener('click', function () {
+    body.classList.remove('plan-only');
+    restore();
+    var sec = $('#plan');
+    if (sec && sec.scrollIntoView) sec.scrollIntoView();
+  });
   window.agentDoctrineAdapt = { planText: function () { return planText(planData()); } };
   render();
 })();
