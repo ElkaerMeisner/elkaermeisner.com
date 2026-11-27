@@ -10,6 +10,22 @@
   };
   var root = $('#adapt');
   if (!root) return;
+
+  /* in-page navigation: mark the step being read */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.g-nav a'));
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var byId = {};
+    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (l) { l.removeAttribute('aria-current'); });
+        byId[en.target.id].setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+  })();
   var T = '../tools/The-Agent-Doctrine-';
 
   /* Each answer selects passages from the book. [text, source] */

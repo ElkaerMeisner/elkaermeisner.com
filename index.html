@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=20261127">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -79,6 +79,8 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="./">Michael Elkær Meisner</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu">
+    <label class="nav-btn" for="nav-toggle" aria-hidden="true">Menu</label>
     <nav class="nav" aria-label="Main">
       <a href="doctrine/">The Agent Doctrine</a>
       <a href="notes/">Notes from the bridge</a>
@@ -128,7 +130,7 @@
     </div>
   </section>
 
-  <section id="about" class="wrap section section-last" aria-labelledby="about-h">
+  <section id="about" class="wrap section" aria-labelledby="about-h">
     <div class="split about">
       <div class="portrait">
         <img src="assets/michael-720.jpg" srcset="assets/michael-360.jpg 360w, assets/michael-720.jpg 720w" sizes="(max-width:600px) 200px, 260px" width="720" height="720" loading="lazy" alt="Michael Elkær Meisner">
@@ -151,9 +153,21 @@
       </div>
     </div>
   </section>
+
+  <section id="contact" class="wrap section section-last" aria-labelledby="contact-h">
+    <div class="signup">
+      <div>
+        <h2 id="contact-h" class="h2">Contact</h2>
+        <p>Questions about the book or the articles can be sent to me on LinkedIn.</p>
+      </div>
+      <div class="go">
+        <a class="btn btn-dark" href="https://www.linkedin.com/in/mmeis/">Write to me on LinkedIn</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer id="contact" class="site-footer">
+<footer class="site-footer">
   <div class="wrap">
     <div>
       <p class="name">Michael Elkær Meisner</p>

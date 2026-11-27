@@ -17,15 +17,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/site.css">
-<link rel="stylesheet" href="../../assets/guide.css?v=20261126f">
-<link rel="stylesheet" href="../../assets/tools.css?v=20261126f">
+<link rel="stylesheet" href="../../assets/site.css?v=20261127">
+<link rel="stylesheet" href="../../assets/guide.css?v=20261127">
+<link rel="stylesheet" href="../../assets/tools.css?v=20261127">
 <style>
 .plan-bar{display:none}
 .plan-only .site-header,.plan-only .site-footer,.plan-only .t-hero,.plan-only .g-nav,.plan-only .no-print{display:none!important}
 .plan-only .g-sec,.plan-only #plan{padding-top:0!important}
 .plan-only .plan-bar{display:flex;flex-wrap:wrap;gap:10px;padding:16px 0}
-.plan-only .plan-bar .btn{min-height:44px;padding:0 18px;font-size:15px;cursor:pointer}
+.plan-only .plan-bar .btn{cursor:pointer}
 .plan-only .sheet-wrap{margin-top:0;margin-bottom:48px}
 .plan-printing .plan-bar{display:none!important}
 .plan-printing .g-sec,.plan-printing #plan{padding-bottom:0!important}
@@ -44,13 +44,15 @@ body{background:#fff}
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-<script defer src="../../assets/adapt.js?v=20261126f"></script>
+<script defer src="../../assets/adapt.js?v=20261127"></script>
 </head>
 <body class="adapt-page">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../">Michael Elkær Meisner</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu">
+    <label class="nav-btn" for="nav-toggle" aria-hidden="true">Menu</label>
     <nav class="nav" aria-label="Main">
       <a href="../" aria-current="page">The Agent Doctrine</a>
       <a href="../../notes/">Notes from the bridge</a>
@@ -62,7 +64,7 @@ body{background:#fff}
 
 <main id="main">
   <section class="wrap t-hero">
-    <p class="t-crumb"><a href="../">The Agent Doctrine</a> · <a href="../guide/">Visual guide</a> · <a href="../#tools-h">Tools</a></p>
+    <p class="crumb"><a href="../">The Agent Doctrine</a> · <a href="../guide/">Visual guide</a> · <a href="../#tools-h">Tools</a></p>
     <p class="eyebrow">Adaptation guide · Chapter 13 and Appendix A</p>
     <h1>Make the Regime yours</h1>
     <p class="lead">The Regime is not a system and not a department. It is a small set of things an organisation does consistently. This guide helps you decide how it fits yours.</p>
@@ -107,7 +109,7 @@ body{background:#fff}
       <button type="button" class="btn btn-line" id="plan-back">Back to the guide</button>
     </div>
     <div class="sheet-wrap"><div class="t-plan" id="adapt-plan"></div></div>
-    <p class="small no-print" style="max-width:760px;margin-top:24px;padding-bottom:104px">The guide quotes The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
+    <p class="small no-print" style="max-width:760px;margin-top:24px">The guide quotes The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
   </section>
   </div>
 </main>

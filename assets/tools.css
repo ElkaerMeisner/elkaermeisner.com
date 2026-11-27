@@ -1,12 +1,9 @@
 /* The Agent Doctrine: interactive tools. Builds on site.css and guide.css. */
 .t-hero{padding-top:72px;padding-bottom:8px}
-.t-hero h1{font-weight:700;font-size:clamp(36px,6vw,56px);line-height:1.05;letter-spacing:-0.025em}
+.t-hero h1{font-weight:600;font-size:clamp(38px,6vw,60px);line-height:1.08;letter-spacing:-0.02em}
 .t-hero .lead{margin-top:20px}
-.t-crumb{font-size:14px;font-weight:500;margin-bottom:20px}
-.t-crumb a{color:var(--text);text-decoration:none}
-.t-crumb a:hover{color:var(--accent)}
 .t-bar{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.t-bar .btn{min-height:44px;padding:0 18px;font-size:15px;cursor:pointer}
+.t-bar .btn{cursor:pointer}
 .t-privacy{margin-top:16px;font-size:14px;color:var(--muted);max-width:680px}
 .t-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;margin-top:48px;padding-bottom:56px;align-items:start}
 @media (min-width:1000px){.t-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.t-side{position:sticky;top:24px}}
@@ -32,7 +29,7 @@
 .t-group > summary .lvl{margin-left:auto;font-family:var(--body);font-size:13px;font-weight:600;color:var(--muted)}
 .t-group .in{padding:0 20px 22px}
 .t-q{padding:18px 0;border-top:1px solid var(--line)}
-.t-q .lv{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.t-q .lv{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .t-q p{margin-top:4px}
 .t-q .row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:10px}
 .t-st{font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--muted)}
@@ -56,7 +53,7 @@
 .t-ctrl{margin:12px 0 0;padding:0;list-style:none}
 .t-ctrl li{padding:10px 0;border-top:1px solid var(--line);font-size:15px;color:var(--text)}
 .t-ctrl strong{display:block;color:var(--ink);font-weight:600}
-@media (max-width:600px){.t-hero{padding-top:48px}.t-layout{margin-top:32px;gap:28px}.t-group > summary{padding:16px}.t-group .in{padding:0 16px 18px}}
+@media (max-width:600px){.t-hero{padding-top:48px}.t-hero .lead{font-size:17px}.t-layout{margin-top:32px;gap:28px}.t-group > summary{padding:16px}.t-group .in{padding:0 16px 18px}}
 
 /* adaptation guide */
 .t-pass{margin-top:4px}

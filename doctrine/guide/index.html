@@ -17,21 +17,23 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/site.css">
-<link rel="stylesheet" href="../../assets/guide.css">
+<link rel="stylesheet" href="../../assets/site.css?v=20261127">
+<link rel="stylesheet" href="../../assets/guide.css?v=20261127">
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-M3YlUIsw4hSc9hp3vxf2L.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-<script defer src="../../assets/guide.js"></script>
+<script defer src="../../assets/guide.js?v=20261127"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../">Michael Elkær Meisner</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu">
+    <label class="nav-btn" for="nav-toggle" aria-hidden="true">Menu</label>
     <nav class="nav" aria-label="Main">
       <a href="../" aria-current="page">The Agent Doctrine</a>
       <a href="../../notes/">Notes from the bridge</a>
@@ -45,6 +47,7 @@
   <section class="g-hero">
     <div class="wrap">
       <div class="g-hero-text">
+        <p class="crumb"><a href="../">The Agent Doctrine</a> · <a href="../#tools-h">Tools</a> · <a href="../adapt/">Adaptation guide</a></p>
         <p class="eyebrow">The Agent Doctrine · Visual guide</p>
         <h1>The Doctrine in ten minutes</h1>
         <p class="lead">An agent is a worker without a contract. Everything we know about running workers, suppliers and systems applies to it, and almost none of it is being applied.</p>
@@ -710,16 +713,28 @@
 
     <h3 class="g-h3">Seven tools and the book</h3>
     <p class="g-intro">Each tool is a template with an example from the book. They are free to use and adapt, with no sign-up.</p>
-    <div class="cards" style="margin-top:24px">
-      <a class="card" href="../tools/The-Agent-Doctrine-First-90-Days-v1.0.xlsx" download><span class="d">Excel · Start</span><span class="t">First 90 Days</span><span class="s">The three decisions before day 1, the plan, and the result each period must reach.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download><span class="d">Excel · Start</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Ladder-Assessment-v1.0.xlsx" download><span class="d">Excel · Measure</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Cost-Measurement-v1.0.xlsx" download><span class="d">Excel · Measure</span><span class="t">Cost Measurement</span><span class="s">Hours and other costs, for the first ninety days and per year afterwards.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download><span class="d">Excel · Run</span><span class="t">Incident and Stop Log</span><span class="s">The five incident types, near misses and stop tests.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Supplier-Terms-Checklist-v1.0.docx" download><span class="d">Word · Run</span><span class="t">Supplier Terms Checklist</span><span class="s">The twelve areas that the terms with a vendor must make clear.</span></a>
-      <a class="card" href="../tools/The-Agent-Doctrine-Board-Quarterly-Page-v1.0.docx" download><span class="d">Word · Run</span><span class="t">The Board’s Quarterly Page</span><span class="s">The nine lines the board sees each quarter.</span></a>
+    <h4 class="h3-eyebrow" style="margin-top:32px">Try in the browser</h4>
+    <div class="cards cards-3" style="margin-top:16px">
+      <a class="card card-go" href="../tools/ladder-assessment/"><span class="d">In the browser</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
+      <a class="card card-go" href="../tools/agent-register/"><span class="d">In the browser</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
+      <a class="card card-go" href="../adapt/"><span class="d">In the browser</span><span class="t">Adaptation guide</span><span class="s">Walks through the decisions for your own organisation and gives you a plan on one page.</span></a>
     </div>
-    <p class="g-note">Two of them can be tried in the browser first: the <a href="../tools/ladder-assessment/">Ladder Assessment</a> and the <a href="../tools/agent-register/">Agent Register</a>. To fit the tools to your own organisation, the <a href="../adapt/">adaptation guide</a> walks through the decisions and gives you a plan on one page.</p>
+    <h4 class="h3-eyebrow" style="margin-top:40px">Start</h4>
+    <div class="cards cards-3" style="margin-top:16px">
+      <a class="card" href="../tools/The-Agent-Doctrine-First-90-Days-v1.0.xlsx" download><span class="d">Excel · Chapter 13, Appendix A.1</span><span class="t">First 90 Days</span><span class="s">The three decisions before day 1, the plan, and the result each period must reach.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download><span class="d">Excel · Chapters 8 and 9, Appendix A.2 to A.5</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
+    </div>
+    <h4 class="h3-eyebrow" style="margin-top:40px">Measure</h4>
+    <div class="cards cards-3" style="margin-top:16px">
+      <a class="card" href="../tools/The-Agent-Doctrine-Ladder-Assessment-v1.0.xlsx" download><span class="d">Excel · Chapter 14, Appendix A.11 and C</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Cost-Measurement-v1.0.xlsx" download><span class="d">Excel · Chapter 13, Appendix A.16</span><span class="t">Cost Measurement</span><span class="s">Hours and other costs, for the first ninety days and per year afterwards.</span></a>
+    </div>
+    <h4 class="h3-eyebrow" style="margin-top:40px">Run</h4>
+    <div class="cards cards-3" style="margin-top:16px">
+      <a class="card" href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download><span class="d">Excel · Chapter 11, Appendix A.9</span><span class="t">Incident and Stop Log</span><span class="s">The five incident types, near misses and stop tests.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Supplier-Terms-Checklist-v1.0.docx" download><span class="d">Word · Chapter 12, Appendix A.10</span><span class="t">Supplier Terms Checklist</span><span class="s">The twelve areas that the terms with a vendor must make clear.</span></a>
+      <a class="card" href="../tools/The-Agent-Doctrine-Board-Quarterly-Page-v1.0.docx" download><span class="d">Word · Chapter 4, Appendix A.13</span><span class="t">The Board’s Quarterly Page</span><span class="s">The nine lines the board sees each quarter.</span></a>
+    </div>
     <div class="actions">
       <a class="btn btn-dark" href="../The-Agent-Doctrine.pdf">Download the book (PDF)</a>
       <a class="btn btn-line" href="../">About the book</a>
