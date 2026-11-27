@@ -17,15 +17,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../assets/site.css?v=20261127">
-<link rel="stylesheet" href="../../assets/guide.css?v=20261127">
+<link rel="stylesheet" href="../../assets/site.css?v=20261127b">
+<link rel="stylesheet" href="../../assets/guide.css?v=20261127b">
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-M3YlUIsw4hSc9hp3vxf2L.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-<script defer src="../../assets/guide.js?v=20261127"></script>
+<script defer src="../../assets/guide.js?v=20261127b"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -323,13 +323,13 @@
       <div class="g-cols">
         <div>
           <span class="g-label">Start from an agent in the book</span>
-          <div class="g-chips" style="margin-top:12px" role="group" aria-label="Example agents">
+          <div class="g-chips mt-12" role="group" aria-label="Example agents">
             <button type="button" class="g-chip" data-preset="meeting" aria-pressed="false">Meeting assistant</button>
             <button type="button" class="g-chip" data-preset="research" aria-pressed="false">Research agent</button>
             <button type="button" class="g-chip" data-preset="invoice" aria-pressed="false">Invoice agent</button>
           </div>
           <p class="g-note" id="access-preset-text">Or tick what your own agent has.</p>
-          <div style="margin-top:20px">
+          <div class="mt-20">
             <button type="button" class="g-toggle" data-part="private" aria-pressed="false"><span class="box" aria-hidden="true"></span>Access to private data</button>
             <button type="button" class="g-toggle" data-part="outside" aria-pressed="false"><span class="box" aria-hidden="true"></span>Content from outside</button>
             <button type="button" class="g-toggle" data-part="act" aria-pressed="false"><span class="box" aria-hidden="true"></span>A way to send or act</button>
@@ -369,8 +369,8 @@
     <p class="eyebrow">05 · Rule 04 in practice</p>
     <h2 id="limits-h">A limit holds when it sits outside the agent</h2>
     <p class="g-intro">Humans do not supervise agents keystroke by keystroke. They set the limits, receive the exceptions and take the decisions the agent is not allowed to take.</p>
-    <div class="g-cols" style="margin-top:32px">
-      <div class="g-box" style="margin-top:0" id="stack-widget" data-js hidden>
+    <div class="g-cols mt-32">
+      <div class="g-box mt-0" id="stack-widget" data-js hidden>
         <div class="g-seg" role="group" aria-label="Where the person sits">
           <button type="button" data-mode="loop" aria-pressed="true">In the loop</button>
           <button type="button" data-mode="stack" aria-pressed="false">Up the stack</button>
@@ -412,7 +412,7 @@
     <p class="g-intro">Sizing works on two parts: a small number of overriding facts, the floors, and comparison for the rest. Each size keeps the controls of the one before and adds its own.</p>
     <div class="g-box" id="size-widget" data-js hidden>
       <span class="g-label">Five agents on a table</span>
-      <div class="g-chips" style="margin-top:12px" role="group" aria-label="Example agents from chapter 8">
+      <div class="g-chips mt-12" role="group" aria-label="Example agents from chapter 8">
         <button type="button" class="g-chip" data-agent="A" aria-pressed="false">A Meeting summaries</button>
         <button type="button" class="g-chip" data-agent="B" aria-pressed="false">B Personnel policies</button>
         <button type="button" class="g-chip" data-agent="C" aria-pressed="false">C Customer complaints</button>
@@ -420,10 +420,10 @@
         <button type="button" class="g-chip" data-agent="E" aria-pressed="false">E Production monitoring</button>
       </div>
       <p class="g-note" id="size-agent-text">Or size an agent of your own: floors first, then compare.</p>
-      <div class="g-cols" style="margin-top:28px">
+      <div class="g-cols mt-28">
         <div>
           <span class="g-label">1. Floors first</span>
-          <div id="size-floors" style="margin-top:8px">
+          <div class="mt-8" id="size-floors">
             <label class="g-check"><input type="checkbox" data-floor="3"><span>Acts on its own with write access to financial records<span class="k">At least Large</span></span></label>
             <label class="g-check"><input type="checkbox" data-floor="3"><span>Produces output that reaches customers without review<span class="k">At least Large</span></span></label>
             <label class="g-check"><input type="checkbox" data-floor="3"><span>Reads confidential or sensitive personal data at scale<span class="k">At least Large</span></span></label>
@@ -433,7 +433,7 @@
         </div>
         <div>
           <span class="g-label">2. Then compare</span>
-          <p class="g-note" style="margin-top:8px">What can it touch, and what happens if it is wrong and nobody notices for a month?</p>
+          <p class="g-note mt-8">What can it touch, and what happens if it is wrong and nobody notices for a month?</p>
           <div class="g-bars g-bars-4" role="group" aria-label="Size">
             <button type="button" class="g-bar h1" data-size="1" aria-pressed="false"><span class="lv" aria-hidden="true">S</span>Small</button>
             <button type="button" class="g-bar h2" data-size="2" aria-pressed="false"><span class="lv" aria-hidden="true">M</span>Medium</button>
@@ -463,7 +463,7 @@
     <div class="g-box" id="incident-widget" data-js hidden>
       <span class="g-label" id="incident-count">Case 1 of 5</span>
       <p class="g-case" id="incident-case"></p>
-      <div id="incident-options" style="margin-top:16px" role="group" aria-label="Which type of incident is it?"></div>
+      <div class="mt-16" id="incident-options" role="group" aria-label="Which type of incident is it?"></div>
       <div class="g-result" id="incident-result" aria-live="polite" hidden></div>
       <div class="g-pager"><button type="button" class="btn btn-dark" id="incident-next" hidden>Next case</button></div>
     </div>
@@ -563,7 +563,7 @@
     <p class="g-intro">A board does not need to learn how language models work. It needs enough knowledge to judge the risk, to set an appetite for it and to tell a good answer from a poor one.</p>
 
     <h3 class="g-h3">Four things to know about agents</h3>
-    <ol class="rules" style="margin-top:16px">
+    <ol class="rules mt-16">
       <li><span class="n" aria-hidden="true">1</span><span>They act with the organisation’s access.</span></li>
       <li><span class="n" aria-hidden="true">2</span><span>Their behaviour varies.</span></li>
       <li><span class="n" aria-hidden="true">3</span><span>They can be steered by what they read.</span></li>
@@ -587,19 +587,19 @@
     <div class="g-box" id="zone-widget">
       <div data-js hidden>
         <span class="g-label">Sort an agent by this statement</span>
-        <div style="margin-top:12px">
+        <div class="mt-12">
           <div class="g-seg" role="group" aria-label="What the agent does" id="zone-does">
             <button type="button" data-v="proposes" aria-pressed="false">Drafts and proposes</button>
             <button type="button" data-v="acts" aria-pressed="false">Acts on its own</button>
           </div>
         </div>
-        <div style="margin-top:12px" id="zone-where-wrap" hidden>
+        <div class="mt-12" id="zone-where-wrap" hidden>
           <div class="g-seg" role="group" aria-label="Where it acts" id="zone-where">
             <button type="button" data-v="other" aria-pressed="false">Outside critical functions</button>
             <button type="button" data-v="critical" aria-pressed="false">In a critical function</button>
           </div>
         </div>
-        <div id="zone-conds" style="margin-top:20px" hidden>
+        <div class="mt-20" id="zone-conds" hidden>
           <span class="g-label">Tick the conditions that hold</span>
           <label class="g-check"><input type="checkbox"><span>The action can be reversed</span></label>
           <label class="g-check"><input type="checkbox"><span>The value is below a limit we have set</span></label>
@@ -642,7 +642,7 @@
       </div>
       <div class="g-answer" data-q="1">
         <p class="g-case">How many agents do we have, and how do we know the list is complete?</p>
-        <div class="g-cols" style="margin-top:20px;gap:16px">
+        <div class="g-cols mt-20 gap-16">
           <div class="g-ans weak"><span class="g-label">A weak answer</span><p>“IT has a good overview, and we are working on a complete inventory as part of the AI programme.”</p></div>
           <div class="g-ans good"><span class="g-label">A good answer</span><p>“Sixty-three as of the end of October. We compared the record with what the three platforms show. Five were running that we had not recorded. Four of those are now recorded and one has been switched off.”</p></div>
         </div>
@@ -650,7 +650,7 @@
       </div>
       <div class="g-answer" data-q="8">
         <p class="g-case">Who can stop them, also at night, when was that last tried, and how is the work done while they are stopped?</p>
-        <div class="g-cols" style="margin-top:20px;gap:16px">
+        <div class="g-cols mt-20 gap-16">
           <div class="g-ans weak"><span class="g-label">A weak answer</span><p>A weak answer names the IT department.</p></div>
           <div class="g-ans good"><span class="g-label">A good answer</span><p>A good answer names two people for each large agent and says that the stop for the complaint agent was tried in September and took nine minutes. It also says how complaints are handled while the agent is stopped.</p></div>
         </div>
@@ -688,7 +688,7 @@
     <p class="eyebrow">10 · Where to start</p>
     <h2 id="start-h">The first ninety days</h2>
     <p class="g-intro">The first round covers agents that have their own access or act on their own. Before day 1, three decisions are needed from executive management: who coordinates, which existing forum takes agent decisions, and the terms of the amnesty.</p>
-    <ol class="rules" style="margin-top:32px">
+    <ol class="rules mt-32">
       <li><span class="n" aria-hidden="true">30</span><span><strong>Days 1 to 30.</strong> Inventory from all sources. Amnesty for unregistered agents. Existing incident duties apply from day one. Result: a first list.</span></li>
       <li><span class="n" aria-hidden="true">60</span><span><strong>Days 31 to 60.</strong> Owner, purpose, end date and size for every agent in scope. Floors agreed with the risk function. Result: level 3 for agents in scope.</span></li>
       <li><span class="n" aria-hidden="true">90</span><span><strong>Days 61 to 90.</strong> Identity and limits for large agents. Stop holders named. First page to the board. Result: a basis for the board’s ten questions.</span></li>
@@ -713,24 +713,24 @@
 
     <h3 class="g-h3">Seven tools and the book</h3>
     <p class="g-intro">Each tool is a template with an example from the book. They are free to use and adapt, with no sign-up.</p>
-    <h4 class="h3-eyebrow" style="margin-top:32px">Try in the browser</h4>
-    <div class="cards cards-3" style="margin-top:16px">
+    <h4 class="h3-eyebrow mt-32">Try in the browser</h4>
+    <div class="cards cards-3 mt-16">
       <a class="card card-go" href="../tools/ladder-assessment/"><span class="d">In the browser</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
       <a class="card card-go" href="../tools/agent-register/"><span class="d">In the browser</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
       <a class="card card-go" href="../adapt/"><span class="d">In the browser</span><span class="t">Adaptation guide</span><span class="s">Walks through the decisions for your own organisation and gives you a plan on one page.</span></a>
     </div>
-    <h4 class="h3-eyebrow" style="margin-top:40px">Start</h4>
-    <div class="cards cards-3" style="margin-top:16px">
+    <h4 class="h3-eyebrow mt-40">Start</h4>
+    <div class="cards cards-3 mt-16">
       <a class="card" href="../tools/The-Agent-Doctrine-First-90-Days-v1.0.xlsx" download><span class="d">Excel · Chapter 13, Appendix A.1</span><span class="t">First 90 Days</span><span class="s">The three decisions before day 1, the plan, and the result each period must reach.</span></a>
       <a class="card" href="../tools/The-Agent-Doctrine-Agent-Register-v1.0.xlsx" download><span class="d">Excel · Chapters 8 and 9, Appendix A.2 to A.5</span><span class="t">Agent Register</span><span class="s">One row per agent with the fields of the record, and a check of what each entry still lacks for its size.</span></a>
     </div>
-    <h4 class="h3-eyebrow" style="margin-top:40px">Measure</h4>
-    <div class="cards cards-3" style="margin-top:16px">
+    <h4 class="h3-eyebrow mt-40">Measure</h4>
+    <div class="cards cards-3 mt-16">
       <a class="card" href="../tools/The-Agent-Doctrine-Ladder-Assessment-v1.0.xlsx" download><span class="d">Excel · Chapter 14, Appendix A.11 and C</span><span class="t">Ladder Assessment</span><span class="s">Twenty-four questions that place the organisation on the ladder, dimension by dimension.</span></a>
       <a class="card" href="../tools/The-Agent-Doctrine-Cost-Measurement-v1.0.xlsx" download><span class="d">Excel · Chapter 13, Appendix A.16</span><span class="t">Cost Measurement</span><span class="s">Hours and other costs, for the first ninety days and per year afterwards.</span></a>
     </div>
-    <h4 class="h3-eyebrow" style="margin-top:40px">Run</h4>
-    <div class="cards cards-3" style="margin-top:16px">
+    <h4 class="h3-eyebrow mt-40">Run</h4>
+    <div class="cards cards-3 mt-16">
       <a class="card" href="../tools/The-Agent-Doctrine-Incident-and-Stop-Log-v1.0.xlsx" download><span class="d">Excel · Chapter 11, Appendix A.9</span><span class="t">Incident and Stop Log</span><span class="s">The five incident types, near misses and stop tests.</span></a>
       <a class="card" href="../tools/The-Agent-Doctrine-Supplier-Terms-Checklist-v1.0.docx" download><span class="d">Word · Chapter 12, Appendix A.10</span><span class="t">Supplier Terms Checklist</span><span class="s">The twelve areas that the terms with a vendor must make clear.</span></a>
       <a class="card" href="../tools/The-Agent-Doctrine-Board-Quarterly-Page-v1.0.docx" download><span class="d">Word · Chapter 4, Appendix A.13</span><span class="t">The Board’s Quarterly Page</span><span class="s">The nine lines the board sees each quarter.</span></a>
@@ -739,7 +739,7 @@
       <a class="btn btn-dark" href="../The-Agent-Doctrine.pdf">Download the book (PDF)</a>
       <a class="btn btn-line" href="../">About the book</a>
     </div>
-    <p class="small" style="margin-top:20px;max-width:760px">The guide quotes and adapts The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
+    <p class="small mt-20 mw-760">The guide quotes and adapts The Agent Doctrine by Michael Elkær Meisner, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. It is not legal advice, and it is provided as it is, without warranties of any kind.</p>
   </section>
 </main>
 
@@ -747,7 +747,7 @@
   <div class="wrap">
     <div>
       <p class="name">Michael Elkær Meisner</p>
-      <p style="margin-top:6px">Executive advisor, Denmark</p>
+      <p>Executive advisor, Denmark</p>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/mmeis/">LinkedIn</a>

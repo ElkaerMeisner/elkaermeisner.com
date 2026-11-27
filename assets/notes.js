@@ -20,6 +20,21 @@
       var r = document.getElementById('note-robots'); if (r) r.parentNode.removeChild(r);
     });
   }
+  /* front page: the three newest notes, read from the notes page so they follow it without edits here */
+  var home = document.getElementById('home-notes');
+  if (home && window.fetch && window.DOMParser) {
+    fetch('notes/').then(function (r) { return r.ok ? r.text() : Promise.reject(); }).then(function (page) {
+      var doc = new DOMParser().parseFromString(page, 'text/html');
+      var cards = Array.prototype.map.call(doc.querySelectorAll('#note-list a.card'), function (a) { return a.outerHTML; });
+      var later = doc.getElementById('notes-upcoming');
+      if (later) JSON.parse(later.textContent).forEach(function (e) { if (Date.parse(e.at) <= Date.now()) cards.unshift(text(e.c)); });
+      if (cards.length < 3) return;
+      var box = document.createElement('div');
+      box.innerHTML = cards.slice(0, 3).join('');
+      Array.prototype.forEach.call(box.querySelectorAll('a.card'), function (a) { a.setAttribute('href', 'notes/' + a.getAttribute('href')); });
+      home.innerHTML = box.innerHTML;
+    }).catch(function () {});
+  }
   var list = document.getElementById('note-list'), up = document.getElementById('notes-upcoming');
   if (list && up) {
     JSON.parse(up.textContent).forEach(function (e) {

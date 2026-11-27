@@ -15,7 +15,8 @@
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 [id]{scroll-margin-top:24px}
-body{margin:0;background:#fff;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1 0 auto}
 a{color:var(--accent)} a:hover{color:var(--accent-dark)}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 img{max-width:100%;height:auto}
@@ -84,9 +85,10 @@ a.card:hover{border-color:var(--ink);color:var(--ink)}
 .card .s{font-size:15px;color:var(--text)}
 @media (min-width:960px){.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .card-go{background:var(--soft);border-color:var(--soft)}
-a.card[download]::after,a.card-go::after{margin-top:auto;padding-top:4px;font-size:14px;font-weight:600;color:var(--accent)}
+a.card[download]::after,a.card-go::after,.note-list a.card::after{margin-top:auto;padding-top:4px;font-size:14px;font-weight:600;color:var(--accent)}
 a.card[download]::after{content:"Download \2193"}
 a.card-go::after{content:"Open \2192"}
+.note-list a.card::after{content:"Read \2192"}
 .crumb{font-size:14px;font-weight:500;margin-bottom:20px;color:var(--muted)}
 .crumb a{color:var(--text);text-decoration:none}
 .crumb a:hover{color:var(--accent)}
@@ -117,6 +119,7 @@ a.card-go::after{content:"Open \2192"}
 .offer .t{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.2}
 .offer .btn{align-self:flex-start;margin-top:auto}
 .offer > div > p:last-of-type{margin-bottom:8px}
+@media (max-width:1011px){.offer{grid-template-columns:1fr}}
 
 .guide-cta{padding:40px;background:var(--soft);border-radius:8px;display:flex;flex-wrap:wrap;gap:32px 56px;align-items:center}
 .guide-cta .body{flex:1 1 420px;min-width:0}
@@ -173,6 +176,8 @@ main.section > .prose:not(.note){padding-top:16px}
 /* footer */
 .site-footer{border-top:1px solid var(--line);background:var(--soft)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-top:48px;padding-bottom:48px;font-size:15px;color:var(--text)}
+.site-footer .name + p{margin-top:6px}
+button.btn{font-family:inherit;cursor:pointer}
 .site-footer .name{font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink)}
 .site-footer .links{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
 
@@ -202,3 +207,23 @@ main.section > .prose:not(.note){padding-top:16px}
   .about > .portrait{flex-basis:200px}
   .hero-book .cover{flex-basis:200px;min-width:180px}
 }
+
+/* spacing helpers: use these instead of style attributes */
+.fs-17{font-size:17px!important}
+.fw-600{font-weight:600!important}
+.gap-16{gap:16px!important}
+.mt-0{margin-top:0!important}
+.mt-8{margin-top:8px!important}
+.mt-12{margin-top:12px!important}
+.mt-16{margin-top:16px!important}
+.mt-20{margin-top:20px!important}
+.mt-24{margin-top:24px!important}
+.mt-28{margin-top:28px!important}
+.mt-32{margin-top:32px!important}
+.mt-40{margin-top:40px!important}
+.mt-48{margin-top:48px!important}
+.mw-640{max-width:640px!important}
+.mw-760{max-width:760px!important}
+.pb-72{padding-bottom:72px!important}
+.pb-104{padding-bottom:104px!important}
+.pt-0{padding-top:0!important}
