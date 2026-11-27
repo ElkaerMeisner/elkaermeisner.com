@@ -12,6 +12,8 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<!-- Count visits to missing pages as a "404" event in Plausible -->
+<script>document.addEventListener('DOMContentLoaded', function () { plausible('404'); });</script>
 </head>
 <body>
 <header class="site-header">
